@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+:root {
+  --main-dark-gray-bg: #2b2b2b;
+  --main-light-gray-bg: #f3f3f3;
+  --title-light-gray-color: #9e9d9d;
+  --title-dark-gray-color: #545454;
+  --gold-highlight-color: #fca311;
+  --dark-mode-bg: linear-gradient(to top left, #000000, #545454);
+  --background: var(--dark-mode-bg);
+  --foreground: var(--title-light-gray-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*=======================================
+==> General Dark and Light Mode classes 
+=========================================*/
+.dark-mode {
+  /* background: linear-gradient(to top left, #000000, #545454) !important;
+  color: var(--main-light-gray-bg) !important;
+  transition: all 0.5s; */
+  --main-dark-gray-bg: #2b2b2b;
+  --main-light-gray-bg: #f3f3f3;
+  --title-light-gray-color: #9e9d9d;
+  --title-dark-gray-color: #545454;
+  --gold-highlight-color: #fca311;
+  --dark-mode-bg: linear-gradient(to top left, #000000, #545454);
+  --background: var(--dark-mode-bg);
+  --foreground: var(--title-light-gray-color);
+}
+
+.light-mode {
+  --title-dark-gray-color: #545454;
+  --light-mode-bg: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
+  --foreground: var(--title-dark-gray-color);
+  --background: var(--light-mode-bg);
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: var(--background);
+  -webkit-touch-callout: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--foreground);
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  -webkit-transition: 0.25ms;
+  transition: 0.25ms;
+}
+
+a:hover {
+  color: var(--gold-highlight-color);
+}
+
+#root {
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  width: 99.9%;
+  height: 100vh;
+  will-change: transform, opacity;
+}
+
+#root::-moz-selection {
+  background: var(--foreground);
+}
+
+#root::selection {
+  background: var(--foreground);
+}
+
+#root::-moz-selection {
+  background: var(--foreground);
+  color: var(--background);
 }
