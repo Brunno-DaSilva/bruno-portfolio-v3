@@ -1,14 +1,19 @@
 import React from "react";
 
-import Home from "./Components/Home/Home";
+import { About, Header, Footer, Resume, Projects } from "./container";
+import { Navbar } from "./Components";
 
-import "./App.css";
-
+import "./App.scss";
 function App() {
   return (
-    <div className="App">
-      <p>App component</p>
-      <Home />
+    <div className="app">
+      <Navbar />
+      {/**
+      <About />
+      <Header />
+      <Footer />
+      <Resume />
+      <Projects /> */}
     </div>
   );
 }

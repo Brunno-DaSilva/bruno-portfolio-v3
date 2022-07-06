@@ -1,14 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 :root {
   --main-dark-gray-bg: #2b2b2b;
   --main-light-gray-bg: #f3f3f3;
-  --title-light-gray-color: #9e9d9d;
+  --title-light-gray-color: #2b2b2b;
   --title-dark-gray-color: #545454;
   --gold-highlight-color: #fca311;
-  --dark-mode-bg: linear-gradient(to top left, #000000, #545454);
+  /* --dark-mode-bg: linear-gradient(to top left, #000000, #545454); */
+  --dark-mode-bg: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
+
   --background: var(--dark-mode-bg);
   --foreground: var(--title-light-gray-color);
+  --ff-body: "Inter", sans-serif;
+  --ff-title: "Work Sans", sans-serif;
 }
 
 /*=======================================
@@ -18,21 +22,21 @@
   /* background: linear-gradient(to top left, #000000, #545454) !important;
   color: var(--main-light-gray-bg) !important;
   transition: all 0.5s; */
-  --main-dark-gray-bg: #2b2b2b;
+  /* --main-dark-gray-bg: #2b2b2b;
   --main-light-gray-bg: #f3f3f3;
   --title-light-gray-color: #9e9d9d;
   --title-dark-gray-color: #545454;
   --gold-highlight-color: #fca311;
   --dark-mode-bg: linear-gradient(to top left, #000000, #545454);
   --background: var(--dark-mode-bg);
-  --foreground: var(--title-light-gray-color);
+  --foreground: var(--title-light-gray-color); */
 }
 
 .light-mode {
-  --title-dark-gray-color: #545454;
+  /* --title-dark-gray-color: #545454;
   --light-mode-bg: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
   --foreground: var(--title-dark-gray-color);
-  --background: var(--light-mode-bg);
+  --background: var(--light-mode-bg); */
 }
 
 *,
@@ -51,7 +55,7 @@ body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--ff-body);
   background: var(--background);
   -webkit-touch-callout: none;
   cursor: default;
@@ -73,6 +77,7 @@ a {
   text-decoration: none;
   -webkit-transition: 0.25ms;
   transition: 0.25ms;
+  color: var(--foreground);
 }
 
 a:hover {
