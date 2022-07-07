@@ -19,8 +19,6 @@
     background: url("https://res.cloudinary.com/duprwuo4j/image/upload/v1657158354/Green_and_White_Safety_First_Square_Safety_Sticker_mgibug.png")
       no-repeat;
     background-size: cover;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
     border-radius: 50% !important;
     margin: 0 auto;
     transition: all ease-in-out 0.1s;
@@ -29,7 +27,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 600px;
+      width: 500px;
       -webkit-transform: translate(-50%, -50%) translateZ(50px);
       -moz-transform: translate(-50%, -50%) translateZ(50px);
       -ms-transform: translate(-50%, -50%) translateZ(50px);
