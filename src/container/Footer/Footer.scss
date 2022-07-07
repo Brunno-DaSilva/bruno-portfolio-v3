@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  height: 19.99%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__container {
+  border-top: 0.0001rem solid hsla(0, 0%, 33%, 0.407);
+  width: 93%;
+
+  .footer__media {
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}

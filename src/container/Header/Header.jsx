@@ -39,10 +39,13 @@ const Header = () => {
           </div>
           <div className="header__tagline-description">
             <p>
-              <span>My Name is Bruno DaSilva.</span>
-              <br />I am a Software Engineer based in Dallas, Texas. <br /> I
-              have creative and inquisitive mind, which is key <br /> to
-              pursuing my passion for coding.
+              <span>I'm Bruno DaSilva.</span> <br />
+              I am a Software Engineer with 6 years of experience in
+              <br /> various IT-related fields, from data analytics and
+              server-side <br />
+              automation to app development & deployment. <br /> I have a
+              creative and inquisitive mind, which is key to <br />
+              engaging my passion for coding.
             </p>
           </div>
 
