@@ -1,0 +1,74 @@
+.header {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__img_container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+
+  div {
+    position: relative;
+    background: url("https://res.cloudinary.com/duprwuo4j/image/upload/v1657158354/Green_and_White_Safety_First_Square_Safety_Sticker_mgibug.png")
+      no-repeat;
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    border-radius: 50% !important;
+    margin: 0 auto;
+    transition: all ease-in-out 0.1s;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 600px;
+      -webkit-transform: translate(-50%, -50%) translateZ(50px);
+      -moz-transform: translate(-50%, -50%) translateZ(50px);
+      -ms-transform: translate(-50%, -50%) translateZ(50px);
+      -o-transform: translate(-50%, -50%) translateZ(50px);
+      transform: translate(-50%, -50%) translateZ(50px);
+    }
+  }
+}
+
+.header__info {
+  height: 50%;
+  width: 50%;
+
+  .header__tagline {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+
+    h1 {
+      font-family: var(--ff-title);
+      font-size: 7rem;
+      letter-spacing: 1px;
+    }
+    div {
+      margin-top: -6rem;
+      p {
+        font-family: var(--ff-body);
+        font-size: 1.4rem;
+        line-height: 2em;
+        span {
+          font-family: var(--ff-title);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
