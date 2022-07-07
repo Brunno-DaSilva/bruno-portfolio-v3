@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillLinkedin, AiFillHeart, AiFillGithub } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 
 import "./Footer.scss";
 const Footer = () => {
@@ -14,17 +14,23 @@ const Footer = () => {
           <h3>LinkedIn</h3>
           <span>
             Profile:{" "}
-            <a href="https://www.linkedin.com/in/bruno-dasilva/">
-              <i> Bruno-DaSilva</i>
+            <a
+              className="hover-underline-animation"
+              href="https://www.linkedin.com/in/bruno-dasilva/"
+            >
+              <span> Bruno-DaSilva</span>
             </a>
           </span>
         </div>
         <div className="footer__media">
           <h3>GitHub</h3>
           <span>
-            Profile:
-            <a href="https://github.com/Brunno-DaSilva">
-              <i> Brunno-DaSilva</i>
+            Profile:{" "}
+            <a
+              className="hover-underline-animation"
+              href="https://github.com/Brunno-DaSilva"
+            >
+              <span>Brunno-DaSilva </span>
             </a>
           </span>
         </div>
@@ -36,8 +42,11 @@ const Footer = () => {
           </p>
           <span>
             About this portfolio:{" "}
-            <a href="https://github.com/Brunno-DaSilva/bruno-portfolio-v3">
-              <i>README</i>
+            <a
+              className="hover-underline-animation"
+              href="https://github.com/Brunno-DaSilva/bruno-portfolio-v3"
+            >
+              README
             </a>
           </span>
         </div>
