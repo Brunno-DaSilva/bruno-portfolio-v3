@@ -58,17 +58,25 @@
     .job_detail__container {
       display: flex;
       .job_detail__date {
-        flex: 2;
+        flex: 3;
         font-family: var(--ff-body);
       }
       .job_detail__description {
-        flex: 6;
+        flex: 5;
         .job_detail__description-title {
+          display: flex;
+          flex-direction: column;
           p {
             font-family: var(--ff-title);
             font-size: 1.2rem;
             font-weight: 800;
             color: #2b2b2b;
+          }
+          span {
+            font-family: var(--ff-title);
+            font-size: 0.9rem;
+            color: #2b2b2b;
+            margin-top: -1rem;
           }
         }
         .job_detail__description-info {
@@ -109,12 +117,11 @@
     .details__program {
       display: flex;
       .details__program-date {
-        flex: 2;
-
+        flex: 3;
         font-family: var(--ff-body);
       }
       .details__program-description {
-        flex: 6;
+        flex: 5;
       }
       .description__program {
         display: flex;

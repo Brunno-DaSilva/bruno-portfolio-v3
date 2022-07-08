@@ -8,9 +8,11 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <Resume />
+
+      {/*
       <Header />
 
-      {/*<Resume />
       <About />
       <Projects /> */}
       <Footer />

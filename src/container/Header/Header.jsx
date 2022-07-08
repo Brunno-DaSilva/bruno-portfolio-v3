@@ -2,7 +2,6 @@ import React, { useState, useEffect, Fragment } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
-import ProfilePicture from "../../assets/images/bruno4.png";
 
 import "./Header.scss";
 
