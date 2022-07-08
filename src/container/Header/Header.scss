@@ -8,7 +8,7 @@
 }
 
 .header__img_container {
-  width: 50%;
+  width: clamp(30rem, 50%, 80%);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -24,9 +24,7 @@
     opacity: 0.95;
 
     .header__img_layer {
-      border: 1px solid rgb(123, 185, 90);
-
-      width: 505px;
+      width: clamp(505px, 505px, 40%);
       height: 505px;
     }
 
@@ -34,7 +32,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 550px;
+      width: clamp(550px, 550px, 50%);
       filter: grayscale(100%);
       -webkit-transform: translate(-50%, -50%) translateZ(50px);
       -moz-transform: translate(-50%, -50%) translateZ(50px);
@@ -47,7 +45,7 @@
 
 .header__info {
   height: 50%;
-  width: 50%;
+  width: clamp(30rem, 50%, 80%);
 
   .header__tagline {
     margin: 0;
@@ -69,6 +67,8 @@
 
     .header__tagline-description {
       margin-top: -4.9rem;
+      width: clamp(30rem, 39rem, 80%);
+
       p {
         font-family: var(--ff-body);
         font-size: 1.4rem;
