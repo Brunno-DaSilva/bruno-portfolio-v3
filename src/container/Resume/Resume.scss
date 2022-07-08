@@ -1,0 +1,144 @@
+.resume {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 4rem;
+}
+.liner {
+  width: 100%;
+  border-bottom: 1px solid hsla(0, 0%, 33%, 0.407);
+  margin: 3rem 0;
+}
+
+.resume__title {
+  h1 {
+    font-family: var(-- --ff-title);
+    font-size: 2.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 5rem;
+  }
+}
+
+.resume__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+/* EXPERIENCE*/
+
+.resume__experience {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  .resume__experience-title {
+    flex: 1;
+    h2 {
+      font-family: var(--ff-title);
+      color: #2b2b2b;
+      font-size: 1.8rem;
+      margin-top: -0.1rem;
+    }
+  }
+
+  .resume__experience-job_detail {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    color: #2b2b2b;
+
+    .job_detail__container {
+      display: flex;
+      .job_detail__date {
+        flex: 2;
+        font-family: var(--ff-body);
+      }
+      .job_detail__description {
+        flex: 6;
+        .job_detail__description-title {
+          p {
+            font-family: var(--ff-title);
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #2b2b2b;
+          }
+        }
+        .job_detail__description-info {
+          p {
+            font-family: var(--ff-body);
+            line-height: 1.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+/*END OF EXPERIENCE*/
+
+/* EDUCATION */
+
+.resume__education {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  .resume__education-title {
+    flex: 1;
+    h2 {
+      font-family: var(--ff-title);
+      color: #2b2b2b;
+      font-size: 1.8rem;
+    }
+  }
+
+  .resume__education-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    color: #2b2b2b;
+
+    .details__program {
+      display: flex;
+      .details__program-date {
+        flex: 2;
+
+        font-family: var(--ff-body);
+      }
+      .details__program-description {
+        flex: 6;
+      }
+      .description__program {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .description__program-name {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-family: var(--ff-title);
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #2b2b2b;
+          }
+          span {
+            font-family: var(--ff-title);
+            font-size: 0.9rem;
+            color: #2b2b2b;
+            margin-top: -1rem;
+          }
+        }
+      }
+    }
+  }
+}
