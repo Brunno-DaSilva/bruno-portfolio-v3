@@ -2,6 +2,21 @@ import React, { useState, useEffect } from "react";
 import { client } from "../../client";
 
 import "./Resume.scss";
+const months = [
+  "",
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 const Resume = () => {
   const [workExperience, setWorkExperience] = useState([]);
@@ -20,6 +35,20 @@ const Resume = () => {
     });
   }, []);
 
+  const formatMonth = (date) => {
+    console.log(date);
+    const monthIndex =
+      date === undefined ? "0" : date.split("").splice(6, 1).join("");
+    const MMM = months[monthIndex];
+    console.log(MMM);
+    return MMM;
+  };
+
+  const formatYear = (date) => {
+    const YYY = date === undefined ? "0" : date.split("").splice(0, 4).join("");
+    return YYY;
+  };
+
   return (
     <div className="resume">
       <div className="resume__title">
@@ -37,21 +66,36 @@ const Resume = () => {
           </div>
 
           <div className="resume__experience-job_detail">
-            {workExperience.map(({ date, title, subtitle }) => {
-              return (
-                <div className="job_detail__container">
-                  <div className="job_detail__date">
-                    <p>{date}</p>
-                  </div>
-                  <div className="job_detail__description">
-                    <div className="job_detail__description-title">
-                      <p>{title}</p>
-                      <span>{subtitle}</span>
+            {workExperience.map(
+              ({ startDate, endDate, title, current, subtitle }) => {
+                const MMMStart = formatMonth(startDate);
+                const MMMEnd = formatMonth(endDate);
+                const YYYStart = formatYear(startDate);
+                const YYYEnd = formatYear(endDate);
+
+                return (
+                  <div key={title} className="job_detail__container">
+                    <div className="job_detail__date">
+                      {current ? (
+                        <p>
+                          {MMMStart} {YYYStart} - <i>Current</i>
+                        </p>
+                      ) : (
+                        <p>
+                          {MMMStart} {YYYStart} - {MMMEnd} {YYYEnd}
+                        </p>
+                      )}
+                    </div>
+                    <div className="job_detail__description">
+                      <div className="job_detail__description-title">
+                        <p>{title}</p>
+                        <span>{subtitle}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              }
+            )}
           </div>
         </div>
 
@@ -67,26 +111,11 @@ const Resume = () => {
               .slice(0)
               .reverse()
               .map(({ date, title, subtitle }) => {
-                const months = [
-                  "Jan",
-                  "Feb",
-                  "Mar",
-                  "Apr",
-                  "May",
-                  "Jun",
-                  "Jul",
-                  "Aug",
-                  "Sep",
-                  "Oct",
-                  "Nov",
-                  "Dec",
-                ];
-                const monthIndex = date.split("").splice(6, 1).join("");
-                const MMM = months[monthIndex];
-                const YYY = date.split("").splice(0, 4).join("");
-                console.log(YYY);
+                let MMM = formatMonth(date);
+                let YYY = formatYear(date);
+
                 return (
-                  <div className="details__program">
+                  <div key={title} className="details__program">
                     <div className="details__program-date">
                       <p>
                         {MMM} {YYY}
