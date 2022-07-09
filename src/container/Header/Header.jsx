@@ -16,8 +16,6 @@ const Header = () => {
     });
   }, []);
 
-  console.log("aboutData -> ", aboutData);
-
   return (
     <Fragment>
       {aboutData.map(({ title, subtitle, description, imgUrl }) => {
