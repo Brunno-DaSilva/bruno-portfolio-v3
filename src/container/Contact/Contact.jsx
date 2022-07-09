@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import ContactImage from "../../assets/images/contact_3d.png";
@@ -16,6 +16,12 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const { username, email, message } = formData;
+
+  const contactRef = useRef();
+
+  useEffect(() => {
+    contactRef.current.focus();
+  }, []);
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -74,6 +80,7 @@ const Contact = () => {
                 placeholder="Your Name"
                 name="username"
                 id="username"
+                ref={contactRef}
                 value={username}
                 onChange={handleChangeInput}
               />

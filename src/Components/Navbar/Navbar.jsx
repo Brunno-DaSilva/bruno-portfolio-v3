@@ -22,6 +22,7 @@ const NAV_LINKS = [
     path: "/contact",
   },
 ];
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
