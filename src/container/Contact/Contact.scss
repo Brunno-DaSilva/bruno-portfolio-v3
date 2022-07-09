@@ -11,6 +11,13 @@
   padding-right: 4rem;
 }
 
+.outline-red {
+  outline: 2px solid rgb(244, 134, 115);
+}
+.outline-green {
+  outline: 0.1rem solid hsl(167, 86%, 63%);
+}
+
 .app__flex {
   display: flex;
   flex-direction: column;
@@ -110,7 +117,6 @@
           background-color: #f3f3f3;
           font-family: var(--ff-body);
           color: #2b2b2b;
-          outline: none;
         }
 
         textarea {

@@ -75,7 +75,7 @@ const Contact = () => {
                 Full Name
               </label>
               <input
-                className="p-text"
+                className="p-text outline-green"
                 type="text"
                 placeholder="Your Name"
                 name="username"
