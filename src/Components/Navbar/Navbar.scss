@@ -17,10 +17,7 @@
   color: var(--foreground);
 
   img {
-    width: 30px;
-    @media screen and (min-width: 2000px) {
-      width: 180px;
-    }
+    width: clamp(35px, 45px, 35px);
   }
 }
 
@@ -71,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--gold-highlight-color);
+  background-color: #18a4a6;
   color: var(--main-light-gray-bg);
 
   div {
