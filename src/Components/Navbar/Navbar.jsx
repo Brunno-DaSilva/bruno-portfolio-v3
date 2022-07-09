@@ -47,7 +47,7 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar__menu">
-        <HiMenu onClick={() => setToggle(true)} />
+        <HiMenu size={30} onClick={() => setToggle(true)} />
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}
