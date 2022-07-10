@@ -61,7 +61,7 @@ const Resume = () => {
             target="_blank"
             title="Download Full Resume"
           >
-            <FiExternalLink size={25} />
+            <FiExternalLink size={30} />
           </a>
         </div>
       </div>
