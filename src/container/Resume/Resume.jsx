@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { client } from "../../client";
+import { FiExternalLink } from "react-icons/fi";
 
 import "./Resume.scss";
 const months = [
@@ -53,6 +54,16 @@ const Resume = () => {
     <div className="resume">
       <div className="resume__title">
         <h1>Resume</h1>
+        <div className="download_resume">
+          <a
+            className="glass"
+            href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
+            target="_blank"
+            title="Download Full Resume"
+          >
+            <FiExternalLink size={25} />
+          </a>
+        </div>
       </div>
 
       <div className="resume__container">

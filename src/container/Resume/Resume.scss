@@ -6,8 +6,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 1rem;
   padding: 4rem;
+  padding-top: 1rem;
 }
 .liner {
   width: 100%;
@@ -16,11 +17,23 @@
 }
 
 .resume__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
   h1 {
     font-family: var(-- --ff-title);
     font-size: 2.9rem;
     letter-spacing: 1px;
-    margin-bottom: 5rem;
+  }
+  .download_resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: #545454;
+    }
   }
 }
 
