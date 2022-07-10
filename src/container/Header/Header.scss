@@ -1,41 +1,33 @@
 .header {
-  flex: 1;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  flex-wrap: wrap;
   margin: 5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .header__img_container {
-  border: 1px solid red;
-
-  width: clamp(28rem, 45rem, 80%);
+  width: clamp(30rem, 40rem, 80%);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
 
   div {
     position: relative;
     background: url("../../assets/images/Background_green.png") no-repeat;
+
     background-size: cover;
     border-radius: 50% !important;
     margin: 0 auto;
     transition: all ease-in-out 0.1s;
     opacity: 0.95;
 
-    .header__img_layer {
-      width: clamp(505px, 505px, 40%);
-      height: 505px;
-    }
-
     img {
       position: absolute;
       left: 50%;
       top: 50%;
-      width: clamp(550px, 550px, 50%);
-      filter: grayscale(100%);
+      width: clamp(450px, 520px, 50%);
       -webkit-transform: translate(-50%, -50%) translateZ(50px);
       -moz-transform: translate(-50%, -50%) translateZ(50px);
       -ms-transform: translate(-50%, -50%) translateZ(50px);
@@ -46,7 +38,6 @@
 }
 
 .header__info {
-  height: 50%;
   width: clamp(30rem, 50%, 80%);
 
   .header__tagline {
@@ -65,6 +56,11 @@
         font-size: 7rem;
         letter-spacing: 1px;
       }
+      @media screen and (max-width: 1299px) {
+        h1 {
+          font-size: 5.5rem;
+        }
+      }
     }
 
     .header__tagline-description {
@@ -82,7 +78,17 @@
           color: #2b2b2b;
         }
       }
+      @media screen and (max-width: 1299px) {
+        p {
+          font-size: 1.1rem;
+          line-height: 2em;
+          span {
+            font-size: 1.5rem;
+          }
+        }
+      }
     }
+
     .header__tagline-buttons {
       width: 100%;
       display: flex;
@@ -110,6 +116,11 @@
           &:hover {
             cursor: pointer;
             color: #18a4a6;
+          }
+        }
+        @media screen and (max-width: 1299px) {
+          a {
+            font-size: 1.4rem;
           }
         }
       }

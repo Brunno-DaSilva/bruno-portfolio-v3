@@ -30,7 +30,7 @@ const Header = () => {
                 <Tilt
                   className="Tilt"
                   options={{ max: 20, perspective: 1000, speed: 100 }}
-                  style={{ height: 520, width: 520 }}
+                  style={{ height: 400, width: 400 }}
                 >
                   <img
                     className="Tilt-inner"
