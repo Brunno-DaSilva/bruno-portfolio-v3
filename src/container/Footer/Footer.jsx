@@ -33,8 +33,19 @@ const Footer = () => {
               <span>Brunno-DaSilva </span>
             </a>
           </span>
+        </div>{" "}
+        <div className="footer__media">
+          <h3>Contact</h3>
+          <span>
+            Go to:{" "}
+            <a
+              className="hover-underline-animation"
+              href="https://github.com/Brunno-DaSilva"
+            >
+              <span>Contact Form</span>
+            </a>
+          </span>
         </div>
-
         <div className="footer__sig">
           <p>
             <span>©{getYear()}</span> made with{" "}
