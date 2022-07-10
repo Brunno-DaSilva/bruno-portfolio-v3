@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import Logo from "../../assets/images/blogo-gray.png";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 
@@ -29,20 +31,22 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <img src={Logo} alt="Bruno DaSilva Logo" />
+        <Link to="/">
+          <img src={Logo} alt="Bruno DaSilva Logo" />
+        </Link>
       </div>
       <ul className="navbar__links">
         <li>
-          <a href={`#`}>Resume</a>
+          <Link to="resume">Resume</Link>
         </li>
         <div className="pipe"></div>
         <li>
-          <a href={`#`}>Projects</a>
+          <Link to="projects">Projects</Link>
         </li>
         <div className="pipe"></div>
 
         <li>
-          <a href={`#`}>Contact</a>
+          <Link to="contact">Contact</Link>
           <div className=""></div>
         </li>
       </ul>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
+import { Link } from "react-router-dom";
+
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
@@ -58,18 +60,18 @@ const Header = () => {
 
                 <div className="header__tagline-buttons">
                   <p className="zero-margin">
-                    <a href="#">Resume</a>
+                    <Link to="resume">Resume</Link>
                   </p>
                   <div className="pipe"></div>
 
                   <p>
-                    <a href="#">Projects</a>
+                    <Link to="projects">Projects</Link>
                   </p>
 
                   <div className="pipe"></div>
 
                   <p>
-                    <a href="#">Contact</a>
+                    <Link to="contact">Contact</Link>
                   </p>
                 </div>
               </div>
