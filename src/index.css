@@ -6,6 +6,7 @@
   --title-light-gray-color: hsl(0, 0%, 17%);
   --title-dark-gray-color: hsl(0, 0%, 33%);
   --green-highlight-color: hsl(181, 75%, 37%);
+
   /* --dark-mode-bg: linear-gradient(to top left, #021011, #073132); */
 
   --dark-mode-bg: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
