@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
+
 import { Contact, Home, Resume, Projects } from "./container";
 import { Error404 } from "./Components";
 import Layout from "./Layout/Layout";

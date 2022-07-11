@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
+
 import { client } from "../../client";
 import { FiExternalLink } from "react-icons/fi";
+import { PacmanLoader } from "react-spinners";
 
 import "./Resume.scss";
 const months = [
@@ -22,6 +24,7 @@ const months = [
 const Resume = () => {
   const [workExperience, setWorkExperience] = useState([]);
   const [education, setEducation] = useState([]);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const queryEd = '*[_type == "education"]';
@@ -34,6 +37,12 @@ const Resume = () => {
     client.fetch(queryWe).then((we) => {
       setWorkExperience(we);
     });
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1800);
   }, []);
 
   const formatMonth = (date) => {
@@ -51,103 +60,109 @@ const Resume = () => {
   };
 
   return (
-    <div className="resume">
-      <div className="resume__title">
-        <h1>Resume</h1>
-        <div className="download_resume">
-          <a
-            className="glass"
-            href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
-            target="_blank"
-            title="Download Full Resume"
-          >
-            <FiExternalLink size={30} />
-          </a>
-        </div>
-      </div>
-
-      <div className="resume__container">
-        <div className="resume__experience">
-          <div className="resume__experience-title">
-            <h2>
-              <span>Work</span>
-              <br />
-              <span>Experience</span>
-            </h2>
+    <Fragment>
+      {loading ? (
+        <PacmanLoader color="#a1ced0" loading />
+      ) : (
+        <div className="resume">
+          <div className="resume__title">
+            <h1>Resume</h1>
+            <div className="download_resume">
+              <a
+                className="glass"
+                href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
+                target="_blank"
+                title="Download Full Resume"
+              >
+                <FiExternalLink size={30} />
+              </a>
+            </div>
           </div>
 
-          <div className="resume__experience-job_detail">
-            {workExperience.map(
-              ({ startDate, endDate, title, current, subtitle }) => {
-                const MMMStart = formatMonth(startDate);
-                const MMMEnd = formatMonth(endDate);
-                const YYYStart = formatYear(startDate);
-                const YYYEnd = formatYear(endDate);
+          <div className="resume__container">
+            <div className="resume__experience">
+              <div className="resume__experience-title">
+                <h2>
+                  <span>Work</span>
+                  <br />
+                  <span>Experience</span>
+                </h2>
+              </div>
 
-                return (
-                  <div key={title} className="job_detail__container">
-                    <div className="job_detail__date">
-                      {current ? (
-                        <p>
-                          {MMMStart} {YYYStart} - <i>Current</i>
-                        </p>
-                      ) : (
-                        <p>
-                          {MMMStart} {YYYStart} - {MMMEnd} {YYYEnd}
-                        </p>
-                      )}
-                    </div>
-                    <div className="job_detail__description">
-                      <div className="job_detail__description-title">
-                        <p>{title}</p>
-                        <span>{subtitle}</span>
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-            )}
-          </div>
-        </div>
+              <div className="resume__experience-job_detail">
+                {workExperience.map(
+                  ({ startDate, endDate, title, current, subtitle }) => {
+                    const MMMStart = formatMonth(startDate);
+                    const MMMEnd = formatMonth(endDate);
+                    const YYYStart = formatYear(startDate);
+                    const YYYEnd = formatYear(endDate);
 
-        {/**END EXPERIENCE */}
-        <div className="liner"></div>
-        <div className="resume__education">
-          <div className="resume__education-title">
-            <h2>Education</h2>
-          </div>
-
-          <div className="resume__education-details">
-            {education
-              .slice(0)
-              .reverse()
-              .map(({ date, title, subtitle }) => {
-                let MMM = formatMonth(date);
-                let YYY = formatYear(date);
-
-                return (
-                  <div key={title} className="details__program">
-                    <div className="details__program-date">
-                      <p>
-                        {MMM} {YYY}
-                      </p>
-                    </div>
-                    <div className="details__program-description">
-                      <div className="description__program">
-                        <div className="description__program-name">
-                          <p>{title}</p>
-                          <span>{subtitle}</span>
+                    return (
+                      <div key={title} className="job_detail__container">
+                        <div className="job_detail__date">
+                          {current ? (
+                            <p>
+                              {MMMStart} {YYYStart} - <i>Current</i>
+                            </p>
+                          ) : (
+                            <p>
+                              {MMMStart} {YYYStart} - {MMMEnd} {YYYEnd}
+                            </p>
+                          )}
+                        </div>
+                        <div className="job_detail__description">
+                          <div className="job_detail__description-title">
+                            <p>{title}</p>
+                            <span>{subtitle}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  }
+                )}
+              </div>
+            </div>
+
+            {/**END EXPERIENCE */}
+            <div className="liner"></div>
+            <div className="resume__education">
+              <div className="resume__education-title">
+                <h2>Education</h2>
+              </div>
+
+              <div className="resume__education-details">
+                {education
+                  .slice(0)
+                  .reverse()
+                  .map(({ date, title, subtitle }) => {
+                    let MMM = formatMonth(date);
+                    let YYY = formatYear(date);
+
+                    return (
+                      <div key={title} className="details__program">
+                        <div className="details__program-date">
+                          <p>
+                            {MMM} {YYY}
+                          </p>
+                        </div>
+                        <div className="details__program-description">
+                          <div className="description__program">
+                            <div className="description__program-name">
+                              <p>{title}</p>
+                              <span>{subtitle}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+            {/**END EDUCATION */}
           </div>
         </div>
-        {/**END EDUCATION */}
-      </div>
-    </div>
+      )}
+    </Fragment>
   );
 };
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
 import { Link } from "react-router-dom";
-import Error404Image from "../../assets/images/BRUNO_BG.png";
 
 import "./Error404.scss";
 
@@ -21,7 +20,8 @@ const Error404 = () => {
         <div className="error__area">
           <h3>
             <span className="number-st">4</span>
-            <span>0</span> <span className="number-nd">4</span>
+            <span className="number-zero">0</span>{" "}
+            <span className="number-nd">4</span>
             <span className="text">Page not found</span>
           </h3>
           <svg class="svg-one" viewBox="0 0 388 307" fill="none">
