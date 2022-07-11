@@ -11,6 +11,21 @@
   padding-top: 1rem;
   padding-right: 4rem;
 }
+.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .icon {
+    img {
+      width: 150px;
+    }
+  }
+  .thank-you__text {
+    font-size: 2rem;
+    color: #18a4a6;
+  }
+}
 
 .outline-red {
   outline: 2px solid rgb(244, 134, 115);
@@ -135,7 +150,7 @@
           box-shadow: 0 0 25px var(--primary-color);
         }
       }
-      button {
+      .btn-submit {
         width: clamp(9rem, 10rem, 100%);
         padding: 1rem 2rem;
         border-radius: 0.25rem;
@@ -157,6 +172,9 @@
 
         &:hover {
           opacity: 0.8;
+        }
+        &:disabled {
+          background-color: hsla(0, 0%, 33%, 0.371);
         }
       }
     }

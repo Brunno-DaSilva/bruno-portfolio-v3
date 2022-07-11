@@ -3,7 +3,10 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import ContactImage from "../../assets/images/contact_3d.png";
 import { urlFor, client } from "../../client";
-import { FiSend } from "react-icons/fi";
+import { FiSend, FiStopCircle } from "react-icons/fi";
+
+import ThankYouIconTwo from "../../assets/images/thank-you-icon-two.gif";
+
 import "./Contact.scss";
 
 const Contact = () => {
@@ -14,8 +17,11 @@ const Contact = () => {
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const { username, email, message } = formData;
+
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
 
   const contactRef = useRef();
 
@@ -28,7 +34,24 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const emailValidation = () => {
+    const emailRegex = new RegExp(
+      "(?=[a-z0-9@.!#$%&'*+/=?^_`{|}~-]{6,254})(?=[a-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@)[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:(?=[a-z0-9-]{1,63}.)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+(?=[a-z0-9-]{1,63})[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+      "gm"
+    );
+
+    if (emailRegex.test(email)) {
+      setEmailError("");
+    } else {
+      setEmailError("Email Address is invalid");
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const isValid = emailValidation();
+
     setLoading(true);
 
     const contact = {
@@ -37,6 +60,10 @@ const Contact = () => {
       email: formData.email,
       message: formData.message,
     };
+
+    console.log("contact.name", contact.name);
+    console.log("contact.email", contact.email);
+    console.log("contact.message", contact.message);
 
     client
       .create(contact)
@@ -68,60 +95,92 @@ const Contact = () => {
             </Tilt>
           </div>
         </motion.div>
+
         <div className="main__right-col">
-          <form>
-            <div className="app__flex">
-              <label for="username" className="label">
-                Full Name
-              </label>
-              <input
-                className="p-text outline-green"
-                type="text"
-                placeholder="Your Name"
-                name="username"
-                id="username"
-                ref={contactRef}
-                value={username}
-                onChange={handleChangeInput}
-              />
-            </div>
-            <div className="app__flex">
-              <label for="email" className="label">
-                Email
-              </label>
-              <input
-                className="p-text"
-                type="email"
-                placeholder="Your Email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={handleChangeInput}
-              />
-            </div>
-            <div className="app__flex">
-              <label for="message" className="label">
-                Message
-              </label>
-              <textarea
-                className="p-text"
-                placeholder="Your Message"
-                value={message}
-                name="message"
-                id="message"
-                onChange={handleChangeInput}
-              />
-            </div>
-            <button className="p-text" onClick={handleSubmit}>
-              {!loading ? (
-                <span>
-                  SEND <FiSend size={25} />
-                </span>
+          {!isFormSubmitted ? (
+            <form>
+              <div className="app__flex">
+                <label htmlFor="username" className="label">
+                  Full Name
+                </label>
+                <input
+                  className="p-text outline-green"
+                  type="text"
+                  placeholder="Your Name"
+                  name="username"
+                  id="username"
+                  ref={contactRef}
+                  value={username}
+                  onChange={handleChangeInput}
+                />
+                {nameError ? <span>Error: {nameError}</span> : ""}
+              </div>
+              <div className="app__flex">
+                <label htmlFor="email" className="label">
+                  Email
+                </label>
+                <input
+                  className="p-text"
+                  placeholder="Your Email"
+                  name="email"
+                  id="email"
+                  value={email}
+                  type="email"
+                  onChange={handleChangeInput}
+                  onBlur={emailValidation}
+                />
+                {emailError ? <span>Error: {emailError}</span> : ""}
+              </div>
+              <div className="app__flex">
+                <label htmlFor="message" className="label">
+                  Message
+                </label>
+                <textarea
+                  className="p-text"
+                  placeholder="Your Message"
+                  value={message}
+                  name="message"
+                  id="message"
+                  onChange={handleChangeInput}
+                />
+              </div>
+
+              {email === "" || username === "" || message === "" ? (
+                <button
+                  disabled
+                  className="p-text btn-submit"
+                  onClick={handleSubmit}
+                >
+                  {!loading ? (
+                    <span>
+                      SEND <FiSend size={25} />
+                    </span>
+                  ) : (
+                    <span>Sending...</span>
+                  )}
+                </button>
               ) : (
-                "Sending..."
+                <button className="p-text btn-submit" onClick={handleSubmit}>
+                  {!loading ? (
+                    <span>
+                      SEND <FiSend size={25} />
+                    </span>
+                  ) : (
+                    <span>Sending...</span>
+                  )}
+                </button>
               )}
-            </button>
-          </form>
+            </form>
+          ) : (
+            <div className="thank-you">
+              <div className="icon">
+                <img src={ThankYouIconTwo} alt="Party Icon - Form submitted" />
+              </div>
+              <h3 className="thank-you__text">
+                Thank you for getting in touch!
+              </h3>
+            </div>
+          )}
         </div>
       </div>
     </div>

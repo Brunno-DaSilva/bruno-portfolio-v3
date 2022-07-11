@@ -46,11 +46,9 @@ const Resume = () => {
   }, []);
 
   const formatMonth = (date) => {
-    console.log(date);
     const monthIndex =
       date === undefined ? "0" : date.split("").splice(6, 1).join("");
     const MMM = months[monthIndex];
-    console.log(MMM);
     return MMM;
   };
 
