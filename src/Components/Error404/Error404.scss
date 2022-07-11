@@ -22,23 +22,33 @@
 }
 
 .error__container {
-  display: flex;
+  border: 1px solid red;
   width: 100%;
+  min-height: clamp(50%, 30rem, 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
 
   .error__area {
-    width: clamp(30rem, 90rem, 80%);
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     position: relative;
 
     h3 {
+      display: flex;
+      flex-wrap: wrap;
       position: absolute;
       font-size: 15rem;
-      top: -20%;
       z-index: 99;
       display: flex;
       justify-content: center;
       align-items: center;
       letter-spacing: -2rem;
+
       span {
         font-size: 5rem;
         letter-spacing: 0;
@@ -48,15 +58,29 @@
 
     .svg-one {
       transform: rotate(130deg);
+      width: 500px;
+      height: 500px;
+      animation-name: spin;
+      animation-duration: 30000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
 
   .error__button {
-    width: clamp(7rem, 15rem, 30%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    margin-top: 5rem;
 
     a {
       background-color: #18a3a551;

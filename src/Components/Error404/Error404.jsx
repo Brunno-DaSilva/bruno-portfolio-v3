@@ -22,13 +22,7 @@ const Error404 = () => {
           <h3>
             404 <span>Page not found</span>
           </h3>
-          <svg
-            class="svg-one"
-            viewBox="0 0 388 307"
-            width="500"
-            height="500"
-            fill="none"
-          >
+          <svg class="svg-one" viewBox="0 0 388 307" fill="none">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
