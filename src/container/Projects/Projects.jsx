@@ -39,6 +39,7 @@ const Projects = () => {
             {projects.map(
               ({ title, description, demoLink, codeLink, imgUrl }, index) => (
                 <div
+                  key={title}
                   className={
                     index + 1 === projects.length
                       ? "projects__wrapper"
@@ -68,13 +69,17 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="projects__right_col">
+                  <div className="projects__right_col ">
                     <motion.div
                       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                       transition={{ duration: 0.8 }}
                       className="header__img_container"
                     >
-                      <img src={urlFor(imgUrl)} alt="Bruno profile img" />
+                      <img
+                        className="hide_mobile"
+                        src={urlFor(imgUrl)}
+                        alt={title}
+                      />
                     </motion.div>
                   </div>
                 </div>
