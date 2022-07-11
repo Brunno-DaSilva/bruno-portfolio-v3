@@ -37,8 +37,14 @@ const Projects = () => {
         ) : (
           <div className="projects__container">
             {projects.map(
-              ({ title, description, demoLink, codeLink, imgUrl }) => (
-                <div className="projects__wrapper">
+              ({ title, description, demoLink, codeLink, imgUrl }, index) => (
+                <div
+                  className={
+                    index + 1 === projects.length
+                      ? "projects__wrapper"
+                      : "projects__wrapper bottom-line  "
+                  }
+                >
                   <div className="projects__left_col">
                     <div className="projects__left_col-title">
                       <h2>{title}</h2>
@@ -48,16 +54,18 @@ const Projects = () => {
                     </div>
 
                     <div className="projects__left_col--buttons">
-                      <button className="demo_link">
+                      <div className="demo_link">
                         <a href={demoLink} target="_blank">
                           Demo Link
                         </a>
-                      </button>
-                      <button className="demo_link">
+                      </div>
+                      <div className="pipe"></div>
+
+                      <div className="demo_link">
                         <a href={codeLink} target="_blank">
                           Code Link
                         </a>
-                      </button>
+                      </div>
                     </div>
                   </div>
                   <div className="projects__right_col">
