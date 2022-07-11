@@ -38,7 +38,7 @@ const Error404 = () => {
           </svg>
         </div>
         <div className="error__button">
-          <Link ref={refButton} to="/">
+          <Link ref={refButton} to="/" title="Go back to main page">
             Back Home
           </Link>
         </div>
