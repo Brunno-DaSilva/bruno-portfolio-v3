@@ -22,7 +22,6 @@
 }
 
 .error__container {
-  border: 1px solid red;
   width: 100%;
   min-height: clamp(50%, 30rem, 60%);
   display: flex;
@@ -31,7 +30,6 @@
   flex-wrap: wrap;
 
   .error__area {
-    border: 1px solid blue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,16 +46,40 @@
       justify-content: center;
       align-items: center;
       letter-spacing: -2rem;
-
-      span {
+      .number-st {
+        animation: bounce 0.8s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      .number-nd {
+        animation: bounce-2 0.8s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+      .text {
         font-size: 5rem;
         letter-spacing: 0;
         margin-left: 2rem;
       }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-50px);
+        }
+      }
+      @keyframes bounce-2 {
+        0% {
+          transform: translateY(-50);
+        }
+        100% {
+          transform: translateY(10px);
+        }
+      }
     }
 
     .svg-one {
-      transform: rotate(130deg);
       width: 500px;
       height: 500px;
       animation-name: spin;

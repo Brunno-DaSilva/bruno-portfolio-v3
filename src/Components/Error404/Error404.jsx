@@ -20,7 +20,9 @@ const Error404 = () => {
       <div className="error__container">
         <div className="error__area">
           <h3>
-            404 <span>Page not found</span>
+            <span className="number-st">4</span>
+            <span>0</span> <span className="number-nd">4</span>
+            <span className="text">Page not found</span>
           </h3>
           <svg class="svg-one" viewBox="0 0 388 307" fill="none">
             <path
