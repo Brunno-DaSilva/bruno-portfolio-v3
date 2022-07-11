@@ -25,6 +25,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.6rem;
+
+  @media screen and (max-width: 375px) {
+    width: 350px !important;
+  }
 }
 
 .p-text,
