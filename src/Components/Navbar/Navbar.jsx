@@ -61,20 +61,20 @@ const Navbar = () => {
             <HiX onClick={() => setToggle(false)} />
             <ul className="navbar__links">
               <li>
-                <a onClick={() => setToggle(false)} href={`#`}>
+                <Link to="resume" onClick={() => setToggle(false)} href={`#`}>
                   Resume
-                </a>
+                </Link>
               </li>
               <li>
-                <a onClick={() => setToggle(false)} href={`#`}>
+                <Link to="projects" onClick={() => setToggle(false)} href={`#`}>
                   Projects
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a onClick={() => setToggle(false)} href={`#`}>
+                <Link to="contact" onClick={() => setToggle(false)} href={`#`}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>
