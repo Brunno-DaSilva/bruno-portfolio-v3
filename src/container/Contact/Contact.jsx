@@ -17,13 +17,16 @@ const Contact = () => {
     message: "",
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [userFocus, setUserFocus] = useState(false);
   const [loading, setLoading] = useState(false);
   const { username, email, message } = formData;
 
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+
+  const [userFocus, setUserFocus] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
+  const [messageFocus, setMessageFocus] = useState(false);
 
   const contactRef = useRef();
 
@@ -160,11 +163,11 @@ const Contact = () => {
                   type="email"
                   onChange={handleChangeInput}
                   onFocus={() => {
-                    setUserFocus(true);
+                    setEmailFocus(true);
                   }}
                   onBlur={() => {
                     emailValidation();
-                    setUserFocus(false);
+                    setEmailFocus(false);
                   }}
                   required
                   aria-required="true"
@@ -174,13 +177,14 @@ const Contact = () => {
                 <span className="contact__error">
                   <span
                     id="emailnote"
-                    className={userFocus ? "instructions" : "offscreen"}
+                    className={emailFocus ? "instructions" : "offscreen"}
                   >
                     <FiInfo /> Email can't be empty Enter your full name.{" "}
                   </span>
                   {emailError ? <span> Error: {emailError}</span> : ""}
                 </span>
               </div>
+
               <div className="app__flex">
                 <label htmlFor="message" className="label">
                   Message
@@ -192,15 +196,31 @@ const Contact = () => {
                   name="message"
                   id="message"
                   onChange={handleChangeInput}
-                  onBlur={messageValidation}
+                  onFocus={() => {
+                    setMessageFocus(true);
+                  }}
+                  onBlur={() => {
+                    messageValidation();
+                    setMessageFocus(false);
+                  }}
+                  required
+                  aria-required="true"
+                  aria-describedby="msgnote"
+                  autocomplete="off"
                 />
               </div>
-              {messageError ? (
-                <span className="contact__error">Error: {messageError}</span>
-              ) : (
-                ""
-              )}
 
+              <span className="contact__error">
+                <span
+                  id="msgnote"
+                  className={messageFocus ? "instructions" : "offscreen"}
+                >
+                  <FiInfo /> Email can't be empty Enter your full name.{" "}
+                </span>
+                {messageError ? <span>Error: {messageError}</span> : ""}
+              </span>
+
+              {/**sssssend */}
               {email === "" || username === "" || message === "" ? (
                 <button
                   disabled
