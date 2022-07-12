@@ -37,16 +37,30 @@ const Navbar = () => {
       </div>
       <ul className="navbar__links">
         <li>
-          <Link to="resume">Resume</Link>
+          <Link aria-label="Open Resume Page" title="Resume Page" to="resume">
+            Resume
+          </Link>
         </li>
         <div className="pipe"></div>
         <li>
-          <Link to="projects">Projects</Link>
+          <Link
+            aria-label="Open Projects Page"
+            title="Projects Page"
+            to="projects"
+          >
+            Projects
+          </Link>
         </li>
         <div className="pipe"></div>
 
         <li>
-          <Link to="contact">Contact</Link>
+          <Link
+            aria-label="Open Contact Page"
+            title="Contact Page"
+            to="contact"
+          >
+            Contact
+          </Link>
           <div className=""></div>
         </li>
       </ul>
@@ -61,18 +75,33 @@ const Navbar = () => {
             <HiX onClick={() => setToggle(false)} />
             <ul className="navbar__links">
               <li>
-                <Link to="resume" onClick={() => setToggle(false)} href={`#`}>
+                <Link
+                  aria-label="Open Resume Page"
+                  title="Resume Page"
+                  to="resume"
+                  onClick={() => setToggle(false)}
+                >
                   Resume
                 </Link>
               </li>
               <li>
-                <Link to="projects" onClick={() => setToggle(false)} href={`#`}>
+                <Link
+                  aria-label="Open Projects Page"
+                  title="Projects Page"
+                  to="projects"
+                  onClick={() => setToggle(false)}
+                >
                   Projects
                 </Link>
               </li>
 
               <li>
-                <Link to="contact" onClick={() => setToggle(false)} href={`#`}>
+                <Link
+                  aria-label="Open Contact Page"
+                  title="Contact Page"
+                  to="contact"
+                  onClick={() => setToggle(false)}
+                >
                   Contact
                 </Link>
               </li>
