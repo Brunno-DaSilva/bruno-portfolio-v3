@@ -17,6 +17,8 @@ const Footer = () => {
             <a
               className="hover-underline-animation"
               href="https://www.linkedin.com/in/bruno-dasilva/"
+              aria-label="Open Bruno's Profile on Linkedin"
+              title="Go to my Linkedin profile"
             >
               <span> Bruno-DaSilva</span>
             </a>
@@ -29,6 +31,8 @@ const Footer = () => {
             <a
               className="hover-underline-animation"
               href="https://github.com/Brunno-DaSilva"
+              aria-label="Open Bruno's Profile on GitHub"
+              title="Go to my GitHub profile"
             >
               <span>Brunno-DaSilva </span>
             </a>
@@ -41,6 +45,7 @@ const Footer = () => {
             <a
               className="hover-underline-animation"
               href="https://github.com/Brunno-DaSilva"
+              aria-label="Open Contact Form Page"
             >
               <span>Contact Form</span>
             </a>
