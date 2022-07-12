@@ -3,7 +3,8 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import ContactImage from "../../assets/images/contact_3d.png";
 import { urlFor, client } from "../../client";
-import { FiSend, FiStopCircle } from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
+import { ImBlocked } from "react-icons/im";
 
 import ThankYouIconTwo from "../../assets/images/thank-you-icon-two.gif";
 
@@ -43,14 +44,28 @@ const Contact = () => {
     if (emailRegex.test(email)) {
       setEmailError("");
     } else {
-      setEmailError("Email Address is invalid");
+      setEmailError("Type a valid email address");
+    }
+  };
+
+  const nameValidation = () => {
+    if (username === undefined) {
+      setNameError("Name can't be empty");
+    } else {
+      setNameError("");
+    }
+  };
+
+  const messageValidation = () => {
+    if (message === "") {
+      setMessageError("Message can't be empty");
+    } else {
+      setMessageError("");
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const isValid = emailValidation();
 
     setLoading(true);
 
@@ -60,10 +75,6 @@ const Contact = () => {
       email: formData.email,
       message: formData.message,
     };
-
-    console.log("contact.name", contact.name);
-    console.log("contact.email", contact.email);
-    console.log("contact.message", contact.message);
 
     client
       .create(contact)
@@ -112,8 +123,13 @@ const Contact = () => {
                   ref={contactRef}
                   value={username}
                   onChange={handleChangeInput}
+                  onBlur={nameValidation}
                 />
-                {nameError ? <span>Error: {nameError}</span> : ""}
+                {nameError ? (
+                  <span className="contact__error">Error: {nameError}</span>
+                ) : (
+                  ""
+                )}
               </div>
               <div className="app__flex">
                 <label htmlFor="email" className="label">
@@ -129,7 +145,11 @@ const Contact = () => {
                   onChange={handleChangeInput}
                   onBlur={emailValidation}
                 />
-                {emailError ? <span>Error: {emailError}</span> : ""}
+                {emailError ? (
+                  <span className="contact__error">Error: {emailError}</span>
+                ) : (
+                  ""
+                )}
               </div>
               <div className="app__flex">
                 <label htmlFor="message" className="label">
@@ -142,8 +162,14 @@ const Contact = () => {
                   name="message"
                   id="message"
                   onChange={handleChangeInput}
+                  onBlur={messageValidation}
                 />
               </div>
+              {messageError ? (
+                <span className="contact__error">Error: {messageError}</span>
+              ) : (
+                ""
+              )}
 
               {email === "" || username === "" || message === "" ? (
                 <button
@@ -153,7 +179,7 @@ const Contact = () => {
                 >
                   {!loading ? (
                     <span>
-                      SEND <FiSend size={25} />
+                      SEND <ImBlocked size={25} />
                     </span>
                   ) : (
                     <span>Sending...</span>
