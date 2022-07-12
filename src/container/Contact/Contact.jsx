@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import ContactImage from "../../assets/images/contact_3d.png";
 import { urlFor, client } from "../../client";
-import { FiSend } from "react-icons/fi";
+import { FiSend, FiInfo } from "react-icons/fi";
 import { ImBlocked } from "react-icons/im";
 
 import ThankYouIconTwo from "../../assets/images/thank-you-icon-two.gif";
@@ -17,6 +17,7 @@ const Contact = () => {
     message: "",
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [userFocus, setUserFocus] = useState(false);
   const [loading, setLoading] = useState(false);
   const { username, email, message } = formData;
 
@@ -123,13 +124,28 @@ const Contact = () => {
                   ref={contactRef}
                   value={username}
                   onChange={handleChangeInput}
-                  onBlur={nameValidation}
+                  onFocus={() => {
+                    setUserFocus(true);
+                  }}
+                  onBlur={() => {
+                    nameValidation();
+                    setUserFocus(false);
+                  }}
+                  required
+                  aria-required="true"
+                  aria-describedby="usernote"
+                  autocomplete="off"
                 />
-                {nameError ? (
-                  <span className="contact__error">Error: {nameError}</span>
-                ) : (
-                  ""
-                )}
+
+                <span className="contact__error">
+                  <span
+                    id="usernote"
+                    className={userFocus ? "instructions" : "offscreen"}
+                  >
+                    <FiInfo /> Name can't be empty Enter your full name.{" "}
+                  </span>
+                  {nameError ? <span>Error: {nameError}</span> : ""}
+                </span>
               </div>
               <div className="app__flex">
                 <label htmlFor="email" className="label">
@@ -143,13 +159,27 @@ const Contact = () => {
                   value={email}
                   type="email"
                   onChange={handleChangeInput}
-                  onBlur={emailValidation}
+                  onFocus={() => {
+                    setUserFocus(true);
+                  }}
+                  onBlur={() => {
+                    emailValidation();
+                    setUserFocus(false);
+                  }}
+                  required
+                  aria-required="true"
+                  aria-describedby="emailnote"
+                  autocomplete="off"
                 />
-                {emailError ? (
-                  <span className="contact__error">Error: {emailError}</span>
-                ) : (
-                  ""
-                )}
+                <span className="contact__error">
+                  <span
+                    id="emailnote"
+                    className={userFocus ? "instructions" : "offscreen"}
+                  >
+                    <FiInfo /> Email can't be empty Enter your full name.{" "}
+                  </span>
+                  {emailError ? <span> Error: {emailError}</span> : ""}
+                </span>
               </div>
               <div className="app__flex">
                 <label htmlFor="message" className="label">
