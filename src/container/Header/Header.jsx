@@ -72,18 +72,36 @@ const Header = () => {
 
                     <div className="header__tagline-buttons">
                       <p className="zero-margin">
-                        <Link to="resume">Resume</Link>
+                        <Link
+                          aria-label="Open Resume Page"
+                          title="Resume Page"
+                          to="resume"
+                        >
+                          Resume
+                        </Link>
                       </p>
                       <div className="pipe"></div>
 
                       <p>
-                        <Link to="projects">Projects</Link>
+                        <Link
+                          aria-label="Open Projects Page"
+                          title="Projects Page"
+                          to="projects"
+                        >
+                          Projects
+                        </Link>
                       </p>
 
                       <div className="pipe"></div>
 
                       <p>
-                        <Link to="contact">Contact</Link>
+                        <Link
+                          aria-label="Open Contact Page"
+                          title="Contact Page"
+                          to="contact"
+                        >
+                          Contact
+                        </Link>
                       </p>
                     </div>
                   </div>
