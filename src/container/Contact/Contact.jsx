@@ -27,6 +27,7 @@ const Contact = () => {
   const [userFocus, setUserFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [messageFocus, setMessageFocus] = useState(false);
+  const [messageCharCount, setMessageCharCount] = useState(0);
 
   const contactRef = useRef();
 
@@ -35,8 +36,15 @@ const Contact = () => {
   }, []);
 
   const handleChangeInput = (e) => {
+    const charLimit = 200;
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    if (message.length < charLimit) {
+      setMessageCharCount(message.length + 1);
+    } else {
+      setMessageError("Message must be smaller than char");
+    }
   };
 
   const emailValidation = () => {
@@ -88,6 +96,8 @@ const Contact = () => {
       })
       .catch((err) => console.log(err));
   };
+
+  console.log("messageCharCount", messageCharCount);
 
   return (
     <div className="contact">
@@ -185,9 +195,12 @@ const Contact = () => {
                 </span>
               </div>
 
-              <div className="app__flex">
+              <div className="app__flex message_textarea">
                 <label htmlFor="message" className="label">
-                  Message
+                  Message{" "}
+                  <span className="textarea__char-counter">
+                    {messageCharCount}/200
+                  </span>
                 </label>
                 <textarea
                   className="p-text"
@@ -203,6 +216,7 @@ const Contact = () => {
                     messageValidation();
                     setMessageFocus(false);
                   }}
+                  maxLength={200}
                   required
                   aria-required="true"
                   aria-describedby="msgnote"
