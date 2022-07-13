@@ -27,14 +27,14 @@ const Header = () => {
   }, []);
 
   return (
-    <Fragment>
+    <div className="header">
       {loading ? (
         <PacmanLoader color="#a1ced0" loading />
       ) : (
         <Fragment>
           {aboutData.map(({ title, subtitle, description, imgUrl }) => {
             return (
-              <div className="header">
+              <Fragment>
                 <motion.div
                   whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                   transition={{ duration: 0.8 }}
@@ -106,12 +106,12 @@ const Header = () => {
                     </div>
                   </div>
                 </motion.div>
-              </div>
+              </Fragment>
             );
           })}
         </Fragment>
       )}
-    </Fragment>
+    </div>
   );
 };
 
