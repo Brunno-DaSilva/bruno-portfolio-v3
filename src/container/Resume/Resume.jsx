@@ -58,11 +58,11 @@ const Resume = () => {
   };
 
   return (
-    <Fragment>
+    <div className="resume">
       {loading ? (
         <PacmanLoader color="#a1ced0" loading />
       ) : (
-        <div className="resume">
+        <Fragment className="resume">
           <div className="resume__title">
             <h1>Resume</h1>
             <div className="download_resume">
@@ -158,9 +158,9 @@ const Resume = () => {
             </div>
             {/**END EDUCATION */}
           </div>
-        </div>
+        </Fragment>
       )}
-    </Fragment>
+    </div>
   );
 };
 
