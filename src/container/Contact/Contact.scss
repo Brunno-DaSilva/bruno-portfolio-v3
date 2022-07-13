@@ -185,7 +185,8 @@
           opacity: 0.8;
         }
         &:disabled {
-          background-color: hsla(0, 0%, 33%, 0.371);
+          background-color: hsla(0, 0%, 33%, 0.165);
+          color: hsla(0, 0%, 33%, 0.589);
         }
       }
 
@@ -194,6 +195,14 @@
           color: #5e5d5d;
         }
       }
+    }
+  }
+
+  .btn-submit {
+    span {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
