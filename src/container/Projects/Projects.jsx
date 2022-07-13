@@ -29,7 +29,7 @@ const Projects = () => {
       <Fragment>
         {loading ? (
           <div className="center">
-            <PacmanLoader color="#a1ced0" loading />{" "}
+            <PacmanLoader size={80} color="#a1ced0" loading />{" "}
           </div>
         ) : (
           <Fragment>

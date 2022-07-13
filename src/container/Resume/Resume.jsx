@@ -60,7 +60,7 @@ const Resume = () => {
   return (
     <div className="resume">
       {loading ? (
-        <PacmanLoader color="#a1ced0" loading />
+        <PacmanLoader size={80} color="#a1ced0" loading />
       ) : (
         <Fragment className="resume">
           <div className="resume__title">

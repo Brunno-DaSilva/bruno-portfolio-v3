@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <div className="header">
       {loading ? (
-        <PacmanLoader color="#a1ced0" loading />
+        <PacmanLoader size={80} color="#a1ced0" loading />
       ) : (
         <Fragment>
           {aboutData.map(({ title, subtitle, description, imgUrl }) => {
