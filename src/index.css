@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+
 :root {
   --main-dark-gray-bg: hsl(0, 0%, 17%);
   --main-light-gray-bg: hsl(0, 0%, 95%);

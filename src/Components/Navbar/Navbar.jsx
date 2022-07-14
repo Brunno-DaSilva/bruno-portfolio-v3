@@ -31,9 +31,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <Link aria-label="Logo" title="Open Home Page" to="/">
-          <img src={Logo} alt="Bruno DaSilva Logo" />
-        </Link>
+        <div>
+          <Link aria-label="Logo" title="Open Home Page" to="/">
+            <img src={Logo} alt="Bruno DaSilva Logo" />
+          </Link>
+        </div>
       </div>
       <ul className="navbar__links">
         <li>

@@ -13,9 +13,24 @@
   justify-content: flex-start;
   align-items: center;
   color: var(--foreground);
+  .svg-one {
+    position: absolute;
+    width: 6rem;
+    top: 1rem;
+    left: 2rem;
+    transform: rotate(-45deg);
+    color: #0ea7a92a;
+  }
+  div {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
 
-  img {
-    width: clamp(35px, 45px, 35px);
+    img {
+      width: clamp(35px, 45px, 35px);
+    }
   }
 }
 

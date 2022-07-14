@@ -49,8 +49,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem;
-    gap: 3rem;
 
     .header__tagline-title {
       h1 {
@@ -140,11 +138,13 @@
             color: #18a4a6;
           }
         }
+
         @media screen and (max-width: 1299px) {
           a {
             font-size: 1.4rem;
           }
         }
+
         @media screen and (max-width: 375px) {
           margin: 0 1rem;
 
@@ -160,8 +160,11 @@
 
     @media screen and (max-width: 375px) {
       width: 300px;
-      margin-left: 4rem;
+      margin-left: 3rem;
       padding: 0;
+      gap: 3rem;
     }
   }
+
+  //end
 }

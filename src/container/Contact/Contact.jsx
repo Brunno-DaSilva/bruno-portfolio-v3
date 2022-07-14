@@ -234,7 +234,6 @@ const Contact = () => {
                 {messageError ? <span>Error: {messageError}</span> : ""}
               </span>
 
-              {/**sssssend */}
               {email === "" || username === "" || message === "" ? (
                 <button
                   disabled
