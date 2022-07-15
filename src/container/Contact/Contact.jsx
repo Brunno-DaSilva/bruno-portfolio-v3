@@ -229,7 +229,7 @@ const Contact = () => {
                   id="msgnote"
                   className={messageFocus ? "instructions" : "offscreen"}
                 >
-                  <FiInfo /> Email can't be empty Enter your full name.{" "}
+                  <FiInfo /> Message can't be empty Enter your full name.{" "}
                 </span>
                 {messageError ? <span>Error: {messageError}</span> : ""}
               </span>
