@@ -88,8 +88,9 @@ const Resume = () => {
               </div>
 
               <div className="resume__experience-job_detail">
-                {workExperience.map(
-                  ({ startDate, endDate, title, current, subtitle }) => {
+                {workExperience
+                  .sort((a, b) => b.workId - a.workId)
+                  .map(({ startDate, endDate, title, current, subtitle }) => {
                     const MMMStart = formatMonth(startDate);
                     const MMMEnd = formatMonth(endDate);
                     const YYYStart = formatYear(startDate);
@@ -116,8 +117,7 @@ const Resume = () => {
                         </div>
                       </div>
                     );
-                  }
-                )}
+                  })}
               </div>
             </div>
 

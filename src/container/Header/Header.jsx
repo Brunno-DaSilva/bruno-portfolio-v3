@@ -34,7 +34,7 @@ const Header = () => {
         <Fragment>
           {aboutData.map(({ title, subtitle, description, imgUrl }) => {
             return (
-              <Fragment>
+              <Fragment key={title}>
                 <motion.div
                   whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                   transition={{ duration: 0.8 }}
