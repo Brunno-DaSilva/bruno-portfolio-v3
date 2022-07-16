@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
+  position: relative;
 
   /*END OF NAVBAR*/
 }
@@ -35,6 +36,7 @@
 }
 
 .navbar__links {
+  border: 1px solid red;
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -70,6 +72,7 @@
     display: none;
   }
 }
+
 /*end navbar__links*/
 
 .navbar__menu {
@@ -149,4 +152,18 @@
   @media screen and (min-width: 900px) {
     display: none;
   }
+}
+
+.layout__darkmode {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.foreground {
+  color: var(--foreground) !important;
+}
+
+.background {
+  background-color: var(--background) !important;
 }

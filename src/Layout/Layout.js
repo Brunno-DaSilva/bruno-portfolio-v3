@@ -7,7 +7,7 @@ import "./Layout.scss";
 
 const Layout = () => {
   return (
-    <Fragment>
+    <Fragment className="layout">
       <Navbar />
       <Outlet />
       <Footer />

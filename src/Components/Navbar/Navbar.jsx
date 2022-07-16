@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
-import Logo from "../../assets/images/blogo-gray.png";
+import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
+import Logo from "../../assets/images/blogo-gray.png";
 import "./Navbar.scss";
 
 const NAV_LINKS = [
@@ -27,6 +27,11 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [theme, setTheme] = useState(false);
+
+  const changeTheme = () => {
+    setTheme((prevMode) => !prevMode);
+  };
 
   return (
     <nav className="navbar">
@@ -38,6 +43,12 @@ const Navbar = () => {
         </div>
       </div>
       <ul className="navbar__links">
+        <div
+          onClick={() => changeTheme()}
+          className={theme ? "dark-mode" : "light-mode foreground"}
+        >
+          {theme ? <BsFillSunFill /> : <BsFillMoonFill />}
+        </div>
         <li>
           <Link aria-label="Open Resume Page" title="Resume Page" to="resume">
             Resume
