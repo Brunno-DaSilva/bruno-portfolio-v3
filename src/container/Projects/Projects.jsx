@@ -6,7 +6,7 @@ import { PacmanLoader } from "react-spinners";
 
 import "./Projects.scss";
 
-const Projects = () => {
+const Projects = ({ theme }) => {
   const [projects, setProjects] = useState([]);
   let [loading, setLoading] = useState(true);
 
@@ -29,7 +29,11 @@ const Projects = () => {
       <Fragment>
         {loading ? (
           <div className="center">
-            <PacmanLoader size={80} color="#a1ced0" loading />{" "}
+            <PacmanLoader
+              size={80}
+              color={theme ? "hsl(39, 56%, 58%)" : "hsl(183, 33%, 72%)"}
+              loading
+            />{" "}
           </div>
         ) : (
           <Fragment>
