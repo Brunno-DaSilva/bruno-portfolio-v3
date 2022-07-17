@@ -27,8 +27,7 @@
         font-size: 1.4rem;
       }
       span {
-        color: var(--foreground) !important;
-
+        color: var(--foreground);
         a {
           &:hover {
             color: var(--ascent-color);
@@ -52,6 +51,7 @@
           }
         }
       }
+
       @media screen and (max-width: 768px) {
         padding: 1rem 0.5rem !important;
 
