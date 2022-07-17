@@ -8,7 +8,7 @@ import { PacmanLoader } from "react-spinners";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ theme, changeTheme }) => {
   const [aboutData, setAboutData] = useState([]);
   let [loading, setLoading] = useState(true);
 
@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="header">
+    <div className={theme ? "dark-mode header" : " light-mode header"}>
       {loading ? (
         <PacmanLoader size={80} color="#a1ced0" loading />
       ) : (

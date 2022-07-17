@@ -9,11 +9,23 @@ import "./App.scss";
 function App() {
   const navigate = useNavigate();
 
+  const [theme, setTheme] = useState(false);
+
+  const changeTheme = () => {
+    setTheme((prevMode) => !prevMode);
+  };
+
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        <Route
+          path="/"
+          element={<Layout theme={theme} changeTheme={changeTheme} />}
+        >
+          <Route
+            index
+            element={<Home theme={theme} changeTheme={changeTheme} />}
+          />
           <Route path="contact" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
           <Route path="projects" element={<Projects />} />

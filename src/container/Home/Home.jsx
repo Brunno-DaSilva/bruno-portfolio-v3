@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "../Header/Header";
 
-const Home = () => {
+const Home = ({ theme, changeTheme }) => {
   return (
     <div>
-      <Header />
+      <Header theme={theme} changeTheme={changeTheme} />
     </div>
   );
 };

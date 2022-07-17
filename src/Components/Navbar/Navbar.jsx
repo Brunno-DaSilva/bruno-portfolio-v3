@@ -25,17 +25,14 @@ const NAV_LINKS = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ theme, changeTheme }) => {
   const [toggle, setToggle] = useState(false);
-  const [theme, setTheme] = useState(false);
-
-  const changeTheme = () => {
-    setTheme((prevMode) => !prevMode);
-  };
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
+      <div
+        className={theme ? "navbar__logo dark-mode" : "light-mode navbar__logo"}
+      >
         <div>
           <Link aria-label="Logo" title="Open Home Page" to="/">
             <img src={Logo} alt="Bruno DaSilva Logo" />
@@ -45,7 +42,7 @@ const Navbar = () => {
       <ul className="navbar__links">
         <div
           onClick={() => changeTheme()}
-          className={theme ? "dark-mode" : "light-mode foreground"}
+          className={theme ? "dark-mode" : "light-mode"}
         >
           {theme ? <BsFillSunFill /> : <BsFillMoonFill />}
         </div>

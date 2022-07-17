@@ -2,45 +2,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
 
-:root {
+/* :root {
   --main-dark-gray-bg: hsl(0, 0%, 17%);
   --main-light-gray-bg: hsl(0, 0%, 95%);
-  --title-light-gray-color: hsl(0, 0%, 17%);
+  --title-light-gray-color: #2b2b2b;
   --title-dark-gray-color: hsl(0, 0%, 33%);
   --green-highlight-color: hsl(181, 75%, 37%);
+  --gold-highlight-color: hsl(37, 98%, 53%);
 
-  /* --dark-mode-bg: linear-gradient(to top left, #021011, #073132); */
-
-  --dark-mode-bg: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
-  --background: var(--dark-mode-bg);
-  --foreground: var(--title-light-gray-color);
   --ff-body: "Inter", sans-serif;
   --ff-title: "Work Sans", sans-serif;
-}
+
+  Light Theme
+  --lt-bg-gradient: linear-gradient(
+    to top left,
+    hsl(0, 0%, 95%),
+    hsl(214, 8%, 83%)
+  ) !important;
+  --lt-text-color: hsl(0, 0%, 17%);
+  --lt-ascent-cyan: hsl(181, 75%, 37%);
+
+  Dark Theme
+  --dt-bg-gradient: linear-gradient(
+    to top left,
+    hsl(184, 79%, 4%),
+    hsl(181, 75%, 11%)
+  ) !important;
+  --dt-text-color: hsl(214, 8%, 83%);
+  --dt-ascent-gold: hsl(37, 98%, 53%);
+} */
 
 /*=======================================
 ==> General Dark and Light Mode classes 
 =========================================*/
-.dark-mode {
-  background: linear-gradient(to top left, #021011, #073132) !important;
-  color: var(--main-light-gray-bg) !important;
-  transition: all 0.5s;
-  --main-dark-gray-bg: #2b2b2b;
-  --main-light-gray-bg: #f3f3f3;
-  --title-light-gray-color: #9e9d9d;
-  --title-dark-gray-color: #545454;
-  --gold-highlight-color: #fca311;
-  --dark-mode-bg: linear-gradient(to top left, #000000, #545454);
-  --background: var(--dark-mode-bg);
-  --foreground: var(--title-light-gray-color);
+/* 
+.light-mode {
+  --background: var(--lt-bg-gradient) !important;
+  --foreground: var(--lt-text-color) !important;
+  --ascent-color: var(--lt-ascent-cyan) !important;
 }
 
-.light-mode {
-  --title-dark-gray-color: #545454;
-  --light-mode-bg: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
-  --foreground: var(--title-dark-gray-color);
-  --background: var(--light-mode-bg);
-}
+.dark-mode {
+  --background: var(--dt-bg-gradient) !important;
+  --foreground: var(--dt-text-color) !important;
+  --ascent-color: var(--dt-ascent-gold) !important;
+} */
 
 *,
 *::before,
@@ -59,7 +65,7 @@ body {
 
 body {
   font-family: var(--ff-body);
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   -webkit-touch-callout: none;
   cursor: default;
@@ -72,7 +78,7 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--foreground);
+  color: var(--foreground) !important;
 }
 
 li,
@@ -87,7 +93,7 @@ a {
 a:hover {
   color: var(--gold-highlight-color);
 }
-
+/* 
 #root {
   margin: 0;
   padding: 0;
@@ -97,14 +103,14 @@ a:hover {
 }
 
 #root::-moz-selection {
-  background: var(--foreground);
+  background-color: var(--foreground) !important;
 }
 
 #root::selection {
-  background: var(--foreground);
+  background-color: var(--foreground) !important;
 }
 
 #root::-moz-selection {
-  background: var(--foreground);
-  color: var(--background);
-}
+  background-color: var(--foreground) !important;
+  color: var(--background) !important;
+} */
