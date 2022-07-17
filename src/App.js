@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className={theme ? "dark-mode app" : "light-mode app"}>
+    <div className={theme ? "app dark-mode" : "app light-mode"}>
       <Routes>
         <Route
           path="/"
