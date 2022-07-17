@@ -24,6 +24,7 @@
   --lt-ascent-box-shadow: hsla(181, 75%, 37%, 0.4) 0px 0px 0px 2px,
     hsla(181, 75%, 37%, 0.65) 0px 4px 6px -1px,
     hsla(181, 75%, 37%, 0.08) 0px 1px 0px inset;
+  --lt-text-color-error: hsla(0, 96%, 52%, 0.639);
 
   // Dark Theme
   //  hsl(181, 75%, 11%)
@@ -38,6 +39,7 @@
   --dt-ascent-box-shadow: hsla(37, 98%, 53%, 0.4) 0px 0px 0px 2px,
     hsla(37, 98%, 53%, 0.65) 0px 4px 6px -1px,
     hsla(37, 98%, 53%, 0.08) 0px 1px 0px inset;
+  --dt-text-color-error: hsl(10, 100%, 66%);
 }
 
 /*=======================================
@@ -49,6 +51,7 @@
   --foreground: var(--lt-text-color) !important;
   --ascent-color: var(--lt-ascent-cyan) !important;
   --ascent-box-shadow: var(--lt-ascent-box-shadow);
+  --text-error: var(--lt-text-color-error);
 }
 
 .dark-mode {
@@ -56,6 +59,7 @@
   --foreground: var(--dt-text-color) !important;
   --ascent-color: var(--dt-ascent-gold) !important;
   --ascent-box-shadow: var(--dt-ascent-box-shadow);
+  --text-error: var(--dt-text-color-error);
 }
 
 *,

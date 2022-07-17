@@ -29,7 +29,11 @@ const Header = ({ theme, changeTheme }) => {
   return (
     <div className={theme ? "header dark-mode" : "header light-mode"}>
       {loading ? (
-        <PacmanLoader size={80} color="#a1ced0" loading />
+        <PacmanLoader
+          size={80}
+          color={theme ? "hsl(39, 56%, 58%)" : "hsl(183, 33%, 72%)"}
+          loading
+        />
       ) : (
         <Fragment>
           {aboutData.map(({ title, subtitle, description, imgUrl }) => {

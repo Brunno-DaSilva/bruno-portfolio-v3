@@ -29,13 +29,14 @@
   font-size: 0.68rem;
   border-radius: 0.5rem;
   background: transparent;
-  color: hsl(0, 0%, 44%);
+  color: var(--foreground);
+  opacity: 0.5;
   padding: 0.25rem;
   bottom: -10px;
 }
 
 .contact__error {
-  color: #fa0e0ec1;
+  color: var(--text-error);
   font-weight: 600;
   font-size: 0.68rem;
   display: flex;

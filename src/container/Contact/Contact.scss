@@ -23,7 +23,7 @@
   }
   .thank-you__text {
     font-size: 2rem;
-    color: #18a4a6;
+    color: var(--ascent-color);
   }
 }
 
@@ -52,9 +52,8 @@
   font-family: var(--ff-title);
   font-size: 1rem;
   text-align: left;
-  color: #2b2b2b;
+  color: var(--foreground);
   line-height: 1.5;
-
   display: flex;
   justify-content: space-between;
 
@@ -143,7 +142,7 @@
           border-radius: 0.25rem;
           background-color: #ffffff;
           font-family: var(--ff-body);
-          color: var(--foreground);
+          color: hsl(0, 0%, 33%);
         }
 
         textarea {
@@ -160,9 +159,8 @@
         padding: 1rem 2rem;
         border-radius: 0.25rem;
         border: none;
-        background-color: #18a4a6;
+        background-color: var(--ascent-color);
         opacity: 0.9;
-
         color: #f3f3f3;
         outline: none;
         margin: 2rem 0 0 0;
@@ -192,7 +190,7 @@
 
       .message_textarea {
         .textarea__char-counter {
-          color: #5e5d5d;
+          color: var(--foreground);
         }
       }
     }
