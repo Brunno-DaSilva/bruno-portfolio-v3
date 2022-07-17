@@ -162,7 +162,7 @@
           transition: all 0.3s ease-in-out;
           &:hover {
             cursor: pointer;
-            color: #18a4a6;
+            color: var(--ascent-color);
           }
         }
 
