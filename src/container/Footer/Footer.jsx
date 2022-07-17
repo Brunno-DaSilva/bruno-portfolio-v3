@@ -1,7 +1,10 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import { AiFillHeart } from "react-icons/ai";
 
 import "./Footer.scss";
+
 const Footer = ({ theme }) => {
   const getYear = () => {
     return new Date().getFullYear();
@@ -42,13 +45,13 @@ const Footer = ({ theme }) => {
           <h3>Contact</h3>
           <span>
             Go to:{" "}
-            <a
+            <Link
+              to="contact"
               className="hover-underline-animation"
-              href="https://github.com/Brunno-DaSilva"
               aria-label="Open Contact Form Page"
             >
               <span>Contact Form</span>
-            </a>
+            </Link>
           </span>
         </div>
         <div className="footer__sig">
