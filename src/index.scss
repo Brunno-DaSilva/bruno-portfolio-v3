@@ -23,10 +23,12 @@
   --lt-ascent-cyan: hsl(181, 75%, 37%);
 
   // Dark Theme
+  //  hsl(181, 75%, 11%)
+
   --dt-bg-gradient: linear-gradient(
     to top left,
     hsl(184, 79%, 4%),
-    hsl(181, 75%, 11%)
+    hsl(182, 81%, 8%)
   ) !important;
   --dt-text-color: hsl(214, 8%, 83%);
   --dt-ascent-gold: hsl(37, 98%, 53%);

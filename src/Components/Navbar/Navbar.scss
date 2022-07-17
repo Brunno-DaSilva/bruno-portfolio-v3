@@ -8,6 +8,11 @@
 
   /*END OF NAVBAR*/
 }
+.icon {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
 .navbar__logo {
   flex: 1;
   display: flex;

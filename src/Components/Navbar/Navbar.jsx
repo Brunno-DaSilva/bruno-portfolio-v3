@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import { BsFillSunFill } from "react-icons/bs";
+import { WiMoonAltFirstQuarter } from "react-icons/wi";
 
 import Logo from "../../assets/images/blogo-gray.png";
 import "./Navbar.scss";
@@ -42,9 +43,13 @@ const Navbar = ({ theme, changeTheme }) => {
       <ul className="navbar__links">
         <div
           onClick={() => changeTheme()}
-          className={theme ? "dark-mode" : "light-mode"}
+          className={theme ? "dark-mode icon" : "light-mode icon"}
         >
-          {theme ? <BsFillSunFill /> : <BsFillMoonFill />}
+          {theme ? (
+            <BsFillSunFill color="hsl(37, 98%, 53%)" size={25} />
+          ) : (
+            <WiMoonAltFirstQuarter color="hsl(181, 75%, 11%)" size={25} />
+          )}
         </div>
         <li>
           <Link aria-label="Open Resume Page" title="Resume Page" to="resume">
