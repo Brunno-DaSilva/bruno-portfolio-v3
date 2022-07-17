@@ -88,7 +88,18 @@ const Navbar = ({ theme, changeTheme }) => {
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
+
             <ul className="navbar__links">
+              <span
+                onClick={() => changeTheme()}
+                className={theme ? "dark-mode icon-mb" : "light-mode icon-mb"}
+              >
+                {theme ? (
+                  <BsFillSunFill color="hsl(37, 98%, 53%)" size={10} />
+                ) : (
+                  <WiMoonAltFirstQuarter color="hsl(181, 75%, 11%)" size={10} />
+                )}
+              </span>
               <li>
                 <Link
                   aria-label="Open Resume Page"

@@ -16,6 +16,7 @@
     cursor: pointer;
   }
 }
+
 .navbar__logo {
   flex: 1;
   display: flex;
@@ -84,8 +85,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #18a4a6;
-  color: var(--main-light-gray-bg);
+  background-color: var(--ascent-color);
+  color: white;
+  position: relative;
+
+  .icon-mb {
+    position: absolute;
+    top: 2%;
+    left: 0;
+  }
 
   div {
     position: fixed;
@@ -100,7 +108,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    background: linear-gradient(to top left, #f3f3f3, #cfd2d6) !important;
+    background: var(--background);
     box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.499);
 
     svg {
@@ -139,7 +147,7 @@
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            color: #18a4a6;
+            color: var(--ascent-color);
           }
         }
       }
@@ -158,12 +166,4 @@
   background-color: transparent;
   display: flex;
   align-items: center;
-}
-
-.foreground {
-  color: var(--foreground) !important;
-}
-
-.background {
-  background-color: var(--background) !important;
 }
