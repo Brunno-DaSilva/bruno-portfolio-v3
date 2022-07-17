@@ -17,6 +17,13 @@
   }
 }
 
+.isActive {
+  color: var(--ascent-color) !important;
+}
+.notActive {
+  color: var(--foreground);
+}
+
 .navbar__logo {
   flex: 1;
   display: flex;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { BsFillSunFill } from "react-icons/bs";
@@ -37,13 +37,13 @@ const Navbar = ({ theme, changeTheme }) => {
         className={theme ? "navbar__logo dark-mode" : "light-mode navbar__logo"}
       >
         <div>
-          <Link aria-label="Logo" title="Open Home Page" to="/">
+          <NavLink aria-label="Logo" title="Open Home Page" to="/">
             {theme ? (
               <img src={WhiteLogo} alt="Bruno DaSilva Logo" />
             ) : (
               <img src={Logo} alt="Bruno DaSilva Logo" />
             )}
-          </Link>
+          </NavLink>
         </div>
       </div>
       <ul className="navbar__links">
@@ -58,30 +58,35 @@ const Navbar = ({ theme, changeTheme }) => {
           )}
         </div>
         <li>
-          <Link aria-label="Open Resume Page" title="Resume Page" to="resume">
+          <NavLink
+            aria-label="Open Resume Page"
+            title="Resume Page"
+            to="resume"
+            className={({ isActive }) => (isActive ? "isActive" : "")}
+          >
             Resume
-          </Link>
+          </NavLink>
         </li>
         <div className="pipe"></div>
         <li>
-          <Link
+          <NavLink
             aria-label="Open Projects Page"
             title="Projects Page"
             to="projects"
           >
             Projects
-          </Link>
+          </NavLink>
         </li>
         <div className="pipe"></div>
 
         <li>
-          <Link
+          <NavLink
             aria-label="Open Contact Page"
             title="Contact Page"
             to="contact"
           >
             Contact
-          </Link>
+          </NavLink>
           <div className=""></div>
         </li>
       </ul>
@@ -107,35 +112,35 @@ const Navbar = ({ theme, changeTheme }) => {
                 )}
               </span>
               <li>
-                <Link
+                <NavLink
                   aria-label="Open Resume Page"
                   title="Resume Page"
                   to="resume"
                   onClick={() => setToggle(false)}
                 >
                   Resume
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   aria-label="Open Projects Page"
                   title="Projects Page"
                   to="projects"
                   onClick={() => setToggle(false)}
                 >
                   Projects
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link
+                <NavLink
                   aria-label="Open Contact Page"
                   title="Contact Page"
                   to="contact"
                   onClick={() => setToggle(false)}
                 >
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </motion.div>
