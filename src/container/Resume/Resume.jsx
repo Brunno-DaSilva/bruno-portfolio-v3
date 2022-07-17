@@ -76,7 +76,10 @@ const Resume = ({ theme }) => {
                 target="_blank"
                 title="Download Full Resume"
               >
-                <FiExternalLink size={30} />
+                <FiExternalLink
+                  color={theme ? "hsl(181, 75%, 11%)" : ""}
+                  size={30}
+                />
               </a>
             </div>
           </div>
