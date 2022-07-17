@@ -22,14 +22,16 @@
       padding: 3rem 0.5rem !important;
 
       h3 {
-        color: #2b2b2b;
+        color: var(--foreground) !important;
         font-family: var(--ff-title);
         font-size: 1.4rem;
       }
       span {
+        color: var(--foreground) !important;
+
         a {
           &:hover {
-            color: #18a4a6;
+            color: var(--ascent-color);
           }
         }
       }
@@ -40,10 +42,13 @@
     .footer__sig {
       padding: 3rem 0.5rem !important;
       line-height: 1.8rem;
+      color: var(--foreground);
+
       span {
+        color: var(--foreground);
         a {
           &:hover {
-            color: #18a4a6;
+            color: var(--ascent-color);
           }
         }
       }
@@ -59,13 +64,13 @@
   }
 }
 .tomate {
-  color: hsl(9, 83%, 63%);
+  color: var(--ascent-color);
 }
 
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #2b2b2b;
+  color: var(--foreground);
   transition: transform 0.4s ease-out;
 }
 
@@ -77,7 +82,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #18a4a6;
+  background-color: var(--ascent-color);
   transform-origin: bottom right;
   transition: transform 0.4s ease-in-out;
 }

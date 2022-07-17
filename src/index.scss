@@ -67,6 +67,7 @@ body {
 
 body {
   font-family: var(--ff-body);
+  background: var(--background);
   -webkit-touch-callout: none;
   cursor: default;
   -webkit-user-select: none;
@@ -90,27 +91,27 @@ a {
   color: var(--foreground);
 }
 
-// a:hover {
-//   color: var(--gold-highlight-color);
-// }
+a:hover {
+  color: var(--gold-highlight-color);
+}
 
-// #root {
-//   margin: 0;
-//   padding: 0;
-//   width: 99.9%;
-//   min-height: 100vh;
-//   will-change: transform, opacity;
-// }
+#root {
+  margin: 0;
+  padding: 0;
+  width: 99.9%;
+  min-height: 100vh;
+  will-change: transform, opacity;
+}
 
-// #root::-moz-selection {
-//   background-color: var(--foreground) !important;
-// }
+#root::-moz-selection {
+  background: var(--foreground) !important;
+}
 
-// #root::selection {
-//   background-color: var(--foreground) !important;
-// }
+#root::selection {
+  background: var(--foreground) !important;
+}
 
-// #root::-moz-selection {
-//   background-color: var(--foreground) !important;
-//   color: var(--background) !important;
-// }
+#root::-moz-selection {
+  background: var(--foreground) !important;
+  color: var(--background) !important;
+}
