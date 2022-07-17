@@ -6,6 +6,8 @@ import { BsFillSunFill } from "react-icons/bs";
 import { WiMoonAltFirstQuarter } from "react-icons/wi";
 
 import Logo from "../../assets/images/blogo-gray.png";
+import WhiteLogo from "../../assets/images/b-logo-white.png";
+
 import "./Navbar.scss";
 
 const NAV_LINKS = [
@@ -36,7 +38,11 @@ const Navbar = ({ theme, changeTheme }) => {
       >
         <div>
           <Link aria-label="Logo" title="Open Home Page" to="/">
-            <img src={Logo} alt="Bruno DaSilva Logo" />
+            {theme ? (
+              <img src={WhiteLogo} alt="Bruno DaSilva Logo" />
+            ) : (
+              <img src={Logo} alt="Bruno DaSilva Logo" />
+            )}
           </Link>
         </div>
       </div>
