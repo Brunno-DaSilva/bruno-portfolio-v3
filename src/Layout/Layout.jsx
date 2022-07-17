@@ -10,7 +10,7 @@ const Layout = ({ theme, changeTheme }) => {
     <Fragment className="layout">
       <Navbar theme={theme} changeTheme={changeTheme} />
       <Outlet />
-      <Footer />
+      <Footer theme={theme} />
     </Fragment>
   );
 };

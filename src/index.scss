@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
 
-/* :root {
+:root {
   --main-dark-gray-bg: hsl(0, 0%, 17%);
   --main-light-gray-bg: hsl(0, 0%, 95%);
   --title-light-gray-color: #2b2b2b;
@@ -13,7 +13,7 @@
   --ff-body: "Inter", sans-serif;
   --ff-title: "Work Sans", sans-serif;
 
-  Light Theme
+  // Light Theme
   --lt-bg-gradient: linear-gradient(
     to top left,
     hsl(0, 0%, 95%),
@@ -22,7 +22,7 @@
   --lt-text-color: hsl(0, 0%, 17%);
   --lt-ascent-cyan: hsl(181, 75%, 37%);
 
-  Dark Theme
+  // Dark Theme
   --dt-bg-gradient: linear-gradient(
     to top left,
     hsl(184, 79%, 4%),
@@ -30,12 +30,12 @@
   ) !important;
   --dt-text-color: hsl(214, 8%, 83%);
   --dt-ascent-gold: hsl(37, 98%, 53%);
-} */
+}
 
 /*=======================================
 ==> General Dark and Light Mode classes 
 =========================================*/
-/* 
+
 .light-mode {
   --background: var(--lt-bg-gradient) !important;
   --foreground: var(--lt-text-color) !important;
@@ -46,7 +46,7 @@
   --background: var(--dt-bg-gradient) !important;
   --foreground: var(--dt-text-color) !important;
   --ascent-color: var(--dt-ascent-gold) !important;
-} */
+}
 
 *,
 *::before,
@@ -65,8 +65,6 @@ body {
 
 body {
   font-family: var(--ff-body);
-  background-color: var(--background);
-  color: var(--foreground);
   -webkit-touch-callout: none;
   cursor: default;
   -webkit-user-select: none;
@@ -90,27 +88,27 @@ a {
   color: var(--foreground);
 }
 
-a:hover {
-  color: var(--gold-highlight-color);
-}
-/* 
-#root {
-  margin: 0;
-  padding: 0;
-  width: 99.9%;
-  min-height: 100vh;
-  will-change: transform, opacity;
-}
+// a:hover {
+//   color: var(--gold-highlight-color);
+// }
 
-#root::-moz-selection {
-  background-color: var(--foreground) !important;
-}
+// #root {
+//   margin: 0;
+//   padding: 0;
+//   width: 99.9%;
+//   min-height: 100vh;
+//   will-change: transform, opacity;
+// }
 
-#root::selection {
-  background-color: var(--foreground) !important;
-}
+// #root::-moz-selection {
+//   background-color: var(--foreground) !important;
+// }
 
-#root::-moz-selection {
-  background-color: var(--foreground) !important;
-  color: var(--background) !important;
-} */
+// #root::selection {
+//   background-color: var(--foreground) !important;
+// }
+
+// #root::-moz-selection {
+//   background-color: var(--foreground) !important;
+//   color: var(--background) !important;
+// }

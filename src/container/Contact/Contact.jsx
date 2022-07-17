@@ -10,7 +10,7 @@ import ThankYouIconTwo from "../../assets/images/thank-you-icon-two.gif";
 
 import "./Contact.scss";
 
-const Contact = () => {
+const Contact = ({ theme }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -100,7 +100,7 @@ const Contact = () => {
   console.log("messageCharCount", messageCharCount);
 
   return (
-    <div className="contact">
+    <div className={theme ? "dark-mode contact" : "light-mode contact"}>
       <div className="contact__title">
         <h1>Contact</h1>
       </div>

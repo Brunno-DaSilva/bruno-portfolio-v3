@@ -27,7 +27,7 @@ const Header = ({ theme, changeTheme }) => {
   }, []);
 
   return (
-    <div className={theme ? "dark-mode header" : " light-mode header"}>
+    <div className={theme ? "header dark-mode" : "header light-mode"}>
       {loading ? (
         <PacmanLoader size={80} color="#a1ced0" loading />
       ) : (

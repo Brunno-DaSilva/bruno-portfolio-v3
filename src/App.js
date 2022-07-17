@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className={theme ? "dark-mode app" : "light-mode app"}>
       <Routes>
         <Route
           path="/"
@@ -26,10 +26,10 @@ function App() {
             index
             element={<Home theme={theme} changeTheme={changeTheme} />}
           />
-          <Route path="contact" element={<Contact />} />
-          <Route path="resume" element={<Resume />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="*" element={<Error404 />} />
+          <Route path="contact" element={<Contact theme={theme} />} />
+          <Route path="resume" element={<Resume theme={theme} />} />
+          <Route path="projects" element={<Projects theme={theme} />} />
+          <Route path="*" element={<Error404 theme={theme} />} />
         </Route>
       </Routes>
     </div>

@@ -2,13 +2,13 @@ import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 
 import "./Footer.scss";
-const Footer = () => {
+const Footer = ({ theme }) => {
   const getYear = () => {
     return new Date().getFullYear();
   };
 
   return (
-    <div className="footer">
+    <div className={theme ? "dark-mode footer" : "light-mode footer"}>
       <div className="footer__container">
         <div className="footer__media">
           <h3>LinkedIn</h3>
