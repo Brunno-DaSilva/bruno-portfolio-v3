@@ -21,7 +21,7 @@ const months = [
   "Dec",
 ];
 
-const Resume = () => {
+const Resume = ({ theme }) => {
   const [workExperience, setWorkExperience] = useState([]);
   const [education, setEducation] = useState([]);
   let [loading, setLoading] = useState(true);
@@ -60,7 +60,11 @@ const Resume = () => {
   return (
     <div className="resume">
       {loading ? (
-        <PacmanLoader size={80} color="#a1ced0" loading />
+        <PacmanLoader
+          size={80}
+          color={theme ? "hsl(39, 56%, 58%)" : "hsl(183, 33%, 72%)"}
+          loading
+        />
       ) : (
         <Fragment className="resume">
           <div className="resume__title">
