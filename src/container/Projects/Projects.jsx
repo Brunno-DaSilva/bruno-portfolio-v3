@@ -80,11 +80,13 @@ const Projects = ({ theme }) => {
                         transition={{ duration: 0.8 }}
                         className="header__img_container"
                       >
-                        <img
-                          className="hide_mobile"
-                          src={urlFor(imgUrl)}
-                          alt={title}
-                        />
+                        <a href={demoLink} target="_blank">
+                          <img
+                            className="hide_mobile"
+                            src={urlFor(imgUrl)}
+                            alt={title}
+                          />
+                        </a>
                       </motion.div>
                     </div>
                   </div>
