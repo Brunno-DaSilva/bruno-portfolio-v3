@@ -16,9 +16,8 @@
 
   div {
     position: relative;
-    background: url("../../assets/images/Background_green.png") no-repeat;
-
     background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50% !important;
     margin: 0 auto;
     transition: all ease-in-out 0.1s;

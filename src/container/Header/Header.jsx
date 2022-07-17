@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 import { PacmanLoader } from "react-spinners";
 
+import bgImageYellow from "../../assets/images/background_yellow.png";
+import bgImageGreen from "../../assets/images/Background_green.png";
+
 import "./Header.scss";
 
 const Header = ({ theme, changeTheme }) => {
@@ -26,6 +29,8 @@ const Header = ({ theme, changeTheme }) => {
     }, 2300);
   }, []);
 
+  const bgImage = theme ? `url(${bgImageYellow})` : `url(${bgImageGreen})`;
+
   return (
     <div className={theme ? "header dark-mode" : "header light-mode"}>
       {loading ? (
@@ -44,7 +49,12 @@ const Header = ({ theme, changeTheme }) => {
                   transition={{ duration: 0.8 }}
                   className="header__img_container"
                 >
-                  <div className="header__img_layer">
+                  <div
+                    className="header__img_layer"
+                    style={{
+                      backgroundImage: `${bgImage}`,
+                    }}
+                  >
                     <Tilt
                       className="Tilt"
                       options={{ max: 20, perspective: 1000, speed: 100 }}

@@ -50,6 +50,7 @@ const Navbar = ({ theme, changeTheme }) => {
         <div
           onClick={() => changeTheme()}
           className={theme ? "dark-mode icon" : "light-mode icon"}
+          title={theme ? "Switch to Dark Theme" : "Switch to Light Theme"}
         >
           {theme ? (
             <BsFillSunFill color="hsl(37, 98%, 53%)" size={25} />
@@ -97,6 +98,7 @@ const Navbar = ({ theme, changeTheme }) => {
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: "easeOut" }}
+            style={{ cursor: "pointer" }}
           >
             <HiX onClick={() => setToggle(false)} />
 

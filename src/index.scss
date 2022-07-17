@@ -3,13 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
 
 :root {
-  --main-dark-gray-bg: hsl(0, 0%, 17%);
-  --main-light-gray-bg: hsl(0, 0%, 95%);
-  --title-light-gray-color: #2b2b2b;
-  --title-dark-gray-color: hsl(0, 0%, 33%);
-  --green-highlight-color: hsl(181, 75%, 37%);
-  --gold-highlight-color: hsl(37, 98%, 53%);
-
   --ff-body: "Inter", sans-serif;
   --ff-title: "Work Sans", sans-serif;
 
@@ -19,7 +12,7 @@
     hsl(0, 0%, 95%),
     hsl(214, 8%, 83%)
   ) !important;
-  --lt-text-color: hsl(0, 0%, 17%);
+  --lt-text-color: hsl(182, 81%, 8%);
   --lt-ascent-cyan: hsl(181, 75%, 37%);
   --lt-ascent-box-shadow: hsla(181, 75%, 37%, 0.4) 0px 0px 0px 2px,
     hsla(181, 75%, 37%, 0.65) 0px 4px 6px -1px,
@@ -27,8 +20,6 @@
   --lt-text-color-error: hsla(0, 96%, 52%, 0.639);
 
   // Dark Theme
-  //  hsl(181, 75%, 11%)
-
   --dt-bg-gradient: linear-gradient(
     to top left,
     hsl(184, 79%, 4%),
