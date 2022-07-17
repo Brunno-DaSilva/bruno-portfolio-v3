@@ -21,6 +21,9 @@
   ) !important;
   --lt-text-color: hsl(0, 0%, 17%);
   --lt-ascent-cyan: hsl(181, 75%, 37%);
+  --lt-ascent-box-shadow: hsla(181, 75%, 37%, 0.4) 0px 0px 0px 2px,
+    hsla(181, 75%, 37%, 0.65) 0px 4px 6px -1px,
+    hsla(181, 75%, 37%, 0.08) 0px 1px 0px inset;
 
   // Dark Theme
   //  hsl(181, 75%, 11%)
@@ -32,6 +35,9 @@
   ) !important;
   --dt-text-color: hsl(214, 8%, 83%);
   --dt-ascent-gold: hsl(37, 98%, 53%);
+  --dt-ascent-box-shadow: hsla(37, 98%, 53%, 0.4) 0px 0px 0px 2px,
+    hsla(37, 98%, 53%, 0.65) 0px 4px 6px -1px,
+    hsla(37, 98%, 53%, 0.08) 0px 1px 0px inset;
 }
 
 /*=======================================
@@ -42,12 +48,14 @@
   --background: var(--lt-bg-gradient) !important;
   --foreground: var(--lt-text-color) !important;
   --ascent-color: var(--lt-ascent-cyan) !important;
+  --ascent-box-shadow: var(--lt-ascent-box-shadow);
 }
 
 .dark-mode {
   --background: var(--dt-bg-gradient) !important;
   --foreground: var(--dt-text-color) !important;
   --ascent-color: var(--dt-ascent-gold) !important;
+  --ascent-box-shadow: var(--dt-ascent-box-shadow);
 }
 
 *,
