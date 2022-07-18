@@ -97,8 +97,6 @@ const Contact = ({ theme }) => {
       .catch((err) => console.log(err));
   };
 
-  console.log("messageCharCount", messageCharCount);
-
   return (
     <div className={theme ? "dark-mode contact" : "light-mode contact"}>
       <div className="contact__title">
