@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Navbar } from "../Components";
 import { Footer } from "../container";
 import { Outlet } from "react-router-dom";

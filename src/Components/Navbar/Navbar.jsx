@@ -74,6 +74,7 @@ const Navbar = ({ theme, changeTheme }) => {
             aria-label="Open Projects Page"
             title="Projects Page"
             to="projects"
+            className={({ isActive }) => (isActive ? "isActive" : "")}
           >
             Projects
           </NavLink>
@@ -85,6 +86,7 @@ const Navbar = ({ theme, changeTheme }) => {
             aria-label="Open Contact Page"
             title="Contact Page"
             to="contact"
+            className={({ isActive }) => (isActive ? "isActive" : "")}
           >
             Contact
           </NavLink>

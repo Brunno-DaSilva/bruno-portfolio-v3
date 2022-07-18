@@ -8,12 +8,22 @@ import Layout from "./Layout/Layout";
 import "./App.scss";
 function App() {
   const navigate = useNavigate();
-
   const [theme, setTheme] = useState(false);
 
   const changeTheme = () => {
     setTheme((prevMode) => !prevMode);
   };
+
+  useEffect(() => {
+    const data = window.localStorage.getItem("SET_THEME");
+    if (data !== null) {
+      setTheme(data);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("SET_THEME", theme);
+  }, [theme]);
 
   return (
     <div className={theme ? "app dark-mode" : "app light-mode"}>
