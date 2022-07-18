@@ -74,6 +74,7 @@ const Resume = ({ theme }) => {
                 className="glass"
                 href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="Download Full Resume"
               >
                 <FiExternalLink
