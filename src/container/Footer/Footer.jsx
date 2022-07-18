@@ -22,6 +22,8 @@ const Footer = ({ theme }) => {
               href="https://www.linkedin.com/in/bruno-dasilva/"
               aria-label="Open Bruno's Profile on Linkedin"
               title="Go to my Linkedin profile"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span> Bruno-DaSilva</span>
             </a>
@@ -36,6 +38,8 @@ const Footer = ({ theme }) => {
               href="https://github.com/Brunno-DaSilva"
               aria-label="Open Bruno's Profile on GitHub"
               title="Go to my GitHub profile"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span>Brunno-DaSilva </span>
             </a>
@@ -64,6 +68,8 @@ const Footer = ({ theme }) => {
             <a
               className="hover-underline-animation"
               href="https://github.com/Brunno-DaSilva/bruno-portfolio-v3"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               README
             </a>
