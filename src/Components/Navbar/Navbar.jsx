@@ -10,6 +10,24 @@ import WhiteLogo from "../../assets/images/b-logo-white.png";
 
 import "./Navbar.scss";
 
+const NAV_LINKS = [
+  {
+    id: 1,
+    name: "Resume |",
+    path: "/resume",
+  },
+  {
+    id: 2,
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    id: 3,
+    name: "Contact",
+    path: "/contact",
+  },
+];
+
 const Navbar = ({ theme, changeTheme }) => {
   const [toggle, setToggle] = useState(false);
 

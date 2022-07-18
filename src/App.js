@@ -7,6 +7,7 @@ import Layout from "./Layout/Layout";
 
 import "./App.scss";
 function App() {
+  const navigate = useNavigate();
   const [theme, setTheme] = useState(true);
 
   const changeTheme = () => {
@@ -15,9 +16,7 @@ function App() {
 
   useEffect(() => {
     const data = window.localStorage.getItem("SET_THEME");
-    if (data !== null) {
-      setTheme(data);
-    }
+    if (data !== null) setTheme(data);
   }, []);
 
   useEffect(() => {
