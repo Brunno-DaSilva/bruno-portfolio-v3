@@ -61,14 +61,22 @@ const Projects = ({ theme }) => {
 
                       <div className="projects__left_col--buttons">
                         <div className="demo_link">
-                          <a href={demoLink} target="_blank">
+                          <a
+                            href={demoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             Demo Link
                           </a>
                         </div>
                         <div className="pipe"></div>
 
                         <div className="demo_link">
-                          <a href={codeLink} target="_blank">
+                          <a
+                            href={codeLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             Code Link
                           </a>
                         </div>
@@ -80,7 +88,11 @@ const Projects = ({ theme }) => {
                         transition={{ duration: 0.8 }}
                         className="header__img_container"
                       >
-                        <a href={demoLink} target="_blank">
+                        <a
+                          href={demoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <img
                             className="hide_mobile"
                             src={urlFor(imgUrl)}
