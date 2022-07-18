@@ -8,7 +8,7 @@ import Layout from "./Layout/Layout";
 import "./App.scss";
 function App() {
   const navigate = useNavigate();
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
 
   const changeTheme = () => {
     setTheme((prevMode) => !prevMode);
