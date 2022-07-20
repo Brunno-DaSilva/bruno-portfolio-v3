@@ -1,6 +1,6 @@
 {
     "short_name": "Bruno DaSilva",
-    "name": "Bruno DaSilva Portfolio",
+    "name": "Bruno DaSilva Portfolio PWA",
     "description": "Bruno DaSilva Portfolio and Projects",
     "icons": [
         {
@@ -19,7 +19,7 @@
     "start_url": ".",
     "display": "standalone",
     "scope": "/",
-    "background_color": "#042425",
+    "background_color": "#ffffff",
     "theme_color": "#042425",
     "shortcuts": [
         {
