@@ -91,11 +91,17 @@ const Resume = ({ theme }) => {
                 rel="noopener noreferrer"
                 title="Download Full Resume"
               >
-                <span style={theme ? { color: "hsl(181, 75%, 11%)" } : ""}>
+                <span
+                  style={
+                    theme
+                      ? { color: "hsl(181, 75%, 11%)" }
+                      : { color: "hsl(0, 0%, 95%)" }
+                  }
+                >
                   Download
                 </span>
                 <FiExternalLink
-                  color={theme ? "hsl(181, 75%, 11%)" : ""}
+                  color={theme ? "hsl(181, 75%, 11%)" : "hsl(0, 0%, 95%)"}
                   size={30}
                 />
               </a>
