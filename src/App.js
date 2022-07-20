@@ -7,7 +7,7 @@ import Layout from "./Layout/Layout";
 
 import "./App.scss";
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(false);
 
   const changeTheme = () => {
     setTheme((prevMode) => !prevMode);
