@@ -1,0 +1,50 @@
+{
+    "short_name": "Bruno DaSilva",
+    "name": "Bruno DaSilva Portfolio",
+    "description": "Bruno DaSilva Portfolio and Projects",
+    "icons": [
+        {
+            "src": "./blogo-gray.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./blogo-gray.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "scope": "/",
+    "background_color": "#042425",
+    "theme_color": "#042425",
+    "shortcuts": [
+        {
+            "name": "About Me",
+            "short_name": "About",
+            "description": "View information about Me",
+            "url": "/about",
+            "icons": [
+                {
+                    "src": "./blogo-gray.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Contact Me",
+            "short_name": "Contact",
+            "description": "Say Hi: hi.dasilva@gmail.com",
+            "url": "/contact",
+            "icons": [
+                {
+                    "src": "./blogo-gray.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
