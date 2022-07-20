@@ -23,7 +23,6 @@ const Projects = ({ theme }) => {
       setLoading(false);
     }, 2600);
   }, []);
-
   return (
     <div className="projects">
       <Fragment>
