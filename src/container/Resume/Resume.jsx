@@ -69,6 +69,20 @@ const Resume = ({ theme }) => {
         <Fragment className="resume">
           <div className="resume__title">
             <h1>Resume</h1>
+            <div className="download_resume_mb">
+              <a
+                className="glass"
+                href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Download Full Resume"
+              >
+                <FiExternalLink
+                  color={theme ? "hsl(181, 75%, 11%)" : ""}
+                  size={30}
+                />
+              </a>
+            </div>
             <div className="download_resume">
               <a
                 className="glass"
@@ -77,6 +91,9 @@ const Resume = ({ theme }) => {
                 rel="noopener noreferrer"
                 title="Download Full Resume"
               >
+                <span style={theme ? { color: "hsl(181, 75%, 11%)" } : ""}>
+                  Download
+                </span>
                 <FiExternalLink
                   color={theme ? "hsl(181, 75%, 11%)" : ""}
                   size={30}
