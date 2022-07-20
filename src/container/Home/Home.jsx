@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../Header/Header";
+import AboutMe from "../AboutMe/AboutMe";
 
 const Home = ({ theme, changeTheme }) => {
   return (
     <div>
-      <Header theme={theme} changeTheme={changeTheme} />
+      <AboutMe theme={theme} changeTheme={changeTheme} />
     </div>
   );
 };

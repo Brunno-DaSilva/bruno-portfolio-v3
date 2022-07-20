@@ -9,9 +9,9 @@ import { PacmanLoader } from "react-spinners";
 import bgImageYellow from "../../assets/images/background_yellow.png";
 import bgImageGreen from "../../assets/images/Background_green.png";
 
-import "./Header.scss";
+import "./AboutMe.scss";
 
-const Header = ({ theme, changeTheme }) => {
+const AboutMe = ({ theme, changeTheme }) => {
   const [aboutData, setAboutData] = useState([]);
   let [loading, setLoading] = useState(true);
 
@@ -129,4 +129,4 @@ const Header = ({ theme, changeTheme }) => {
   );
 };
 
-export default Header;
+export default AboutMe;
