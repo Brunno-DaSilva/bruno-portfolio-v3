@@ -62,7 +62,7 @@ const Resume = ({ theme }) => {
       {loading ? (
         <PacmanLoader
           size={80}
-          color={theme ? "hsl(39, 56%, 58%)" : "hsl(183, 33%, 72%)"}
+          color={theme ? "hsl(183, 33%, 72%)" : "hsl(39, 56%, 58%)"}
           loading
         />
       ) : (
@@ -78,7 +78,7 @@ const Resume = ({ theme }) => {
                 title="Download Full Resume"
               >
                 <FiExternalLink
-                  color={theme ? "hsl(181, 75%, 11%)" : ""}
+                  color={theme ? "hsl(0, 0%, 95%)" : "hsl(181, 75%, 11%)"}
                   size={30}
                 />
               </a>
@@ -94,14 +94,14 @@ const Resume = ({ theme }) => {
                 <span
                   style={
                     theme
-                      ? { color: "hsl(181, 75%, 11%)" }
-                      : { color: "hsl(0, 0%, 95%)" }
+                      ? { color: "hsl(0, 0%, 95%)" }
+                      : { color: "hsl(181, 75%, 11%)" }
                   }
                 >
                   Download
                 </span>
                 <FiExternalLink
-                  color={theme ? "hsl(181, 75%, 11%)" : "hsl(0, 0%, 95%)"}
+                  color={theme ? "hsl(0, 0%, 95%)" : "hsl(181, 75%, 11%)"}
                   size={30}
                 />
               </a>

@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-import ContactImage from "../../assets/images/contact_3d.png";
 import { urlFor, client } from "../../client";
 import { FiSend, FiInfo } from "react-icons/fi";
 import { ImBlocked } from "react-icons/im";
 
+import ContactImage from "../../assets/images/contact_3d.png";
 import ThankYouIconTwo from "../../assets/images/thank-you-icon-two.gif";
+import bgImageYellow from "../../assets/images/background_yellow.png";
+import bgImageGreen from "../../assets/images/Background_green.png";
 
 import "./Contact.scss";
 
@@ -28,6 +30,8 @@ const Contact = ({ theme }) => {
   const [emailFocus, setEmailFocus] = useState(false);
   const [messageFocus, setMessageFocus] = useState(false);
   const [messageCharCount, setMessageCharCount] = useState(0);
+
+  const bgImage = theme ? `url(${bgImageGreen})` : `url(${bgImageYellow})`;
 
   const contactRef = useRef();
 
@@ -98,7 +102,7 @@ const Contact = ({ theme }) => {
   };
 
   return (
-    <div className={theme ? "dark-mode contact" : "light-mode contact"}>
+    <div className={theme ? "light-mode contact" : "dark-mode contact"}>
       <div className="contact__title">
         <h1>Contact</h1>
       </div>
@@ -108,13 +112,18 @@ const Contact = ({ theme }) => {
           transition={{ duration: 0.8 }}
           className="main__left-col"
         >
-          <div className="contact__img_layer">
+          <div
+            className="contact__img_layer"
+            style={{
+              backgroundImage: `${bgImage}`,
+            }}
+          >
             <Tilt
               className="Tilt"
               options={{ max: 20, perspective: 1000, speed: 100 }}
               style={{ height: 400, width: 400 }}
             >
-              <img src={ContactImage} alt="Images contact" />
+              <img loading="lazy" src={ContactImage} alt="Images contact" />
             </Tilt>
           </div>
         </motion.div>

@@ -30,7 +30,7 @@ const Projects = ({ theme }) => {
           <div className="center">
             <PacmanLoader
               size={80}
-              color={theme ? "hsl(39, 56%, 58%)" : "hsl(183, 33%, 72%)"}
+              color={theme ? "hsl(183, 33%, 72%)" : "hsl(39, 56%, 58%)"}
               loading
             />{" "}
           </div>

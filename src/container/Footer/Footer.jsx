@@ -11,7 +11,7 @@ const Footer = ({ theme }) => {
   };
 
   return (
-    <div className={theme ? "dark-mode footer" : "light-mode footer"}>
+    <div className={theme ? "light-mode footer" : " footer dark-mode"}>
       <div className="footer__container">
         <div className="footer__media">
           <h3>LinkedIn</h3>

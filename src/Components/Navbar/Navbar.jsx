@@ -16,14 +16,16 @@ const Navbar = ({ theme, changeTheme }) => {
   return (
     <nav className="navbar">
       <div
-        className={theme ? "navbar__logo dark-mode" : "light-mode navbar__logo"}
+        className={
+          theme ? "navbar__logo light-mode " : "navbar__logo  dark-mode"
+        }
       >
         <div>
           <NavLink aria-label="Logo" title="Open Home Page" to="/">
             {theme ? (
-              <img src={WhiteLogo} alt="Bruno DaSilva Logo" />
-            ) : (
               <img src={Logo} alt="Bruno DaSilva Logo" />
+            ) : (
+              <img src={WhiteLogo} alt="Bruno DaSilva Logo" />
             )}
           </NavLink>
         </div>
@@ -31,13 +33,13 @@ const Navbar = ({ theme, changeTheme }) => {
       <ul className="navbar__links">
         <div
           onClick={() => changeTheme()}
-          className={theme ? "dark-mode icon" : "light-mode icon"}
-          title={theme ? "Switch to Dark Theme" : "Switch to Light Theme"}
+          className={theme ? "icon light-mode" : " icon dark-mode"}
+          title={theme ? "Switch to Light Theme" : "Switch to Dark Theme"}
         >
           {theme ? (
-            <BsFillSunFill color="hsl(37, 98%, 53%)" size={25} />
-          ) : (
             <WiMoonAltFirstQuarter color="hsl(181, 75%, 11%)" size={25} />
+          ) : (
+            <BsFillSunFill color="hsl(37, 98%, 53%)" size={25} />
           )}
         </div>
         <li>
@@ -92,9 +94,9 @@ const Navbar = ({ theme, changeTheme }) => {
                 className={theme ? "dark-mode icon-mb" : "light-mode icon-mb"}
               >
                 {theme ? (
-                  <BsFillSunFill color="hsl(37, 98%, 53%)" size={10} />
-                ) : (
                   <WiMoonAltFirstQuarter color="hsl(181, 75%, 11%)" size={10} />
+                ) : (
+                  <BsFillSunFill color="hsl(37, 98%, 53%)" size={10} />
                 )}
               </span>
               <li>

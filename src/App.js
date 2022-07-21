@@ -7,7 +7,7 @@ import Layout from "./Layout/Layout";
 
 import "./App.scss";
 function App() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
 
   const changeTheme = () => {
     setTheme((prevMode) => !prevMode);
@@ -23,7 +23,7 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={theme ? "app dark-mode" : "app light-mode"}>
+    <div className={theme ? "app light-mode" : "app dark-mode"}>
       <Routes>
         <Route
           path="/"

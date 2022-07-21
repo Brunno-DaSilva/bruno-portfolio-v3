@@ -29,14 +29,14 @@ const AboutMe = ({ theme, changeTheme }) => {
     }, 2300);
   }, []);
 
-  const bgImage = theme ? `url(${bgImageYellow})` : `url(${bgImageGreen})`;
+  const bgImage = theme ? `url(${bgImageGreen})` : `url(${bgImageYellow})`;
 
   return (
-    <div className={theme ? "header dark-mode" : "header light-mode"}>
+    <div className={theme ? "header light-mode" : "header dark-mode "}>
       {loading ? (
         <PacmanLoader
           size={80}
-          color={theme ? "hsl(39, 56%, 58%)" : "hsl(183, 33%, 72%)"}
+          color={theme ? "hsl(183, 33%, 72%)" : "hsl(39, 56%, 58%)"}
           loading
         />
       ) : (
