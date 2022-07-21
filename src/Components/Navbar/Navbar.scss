@@ -8,6 +8,7 @@
 
   /*END OF NAVBAR*/
 }
+
 .icon {
   display: flex;
   align-items: center;
@@ -160,6 +161,7 @@
         }
       }
     }
+
     @media screen and (min-width: 900px) {
       display: none;
     }
@@ -167,6 +169,10 @@
 
   @media screen and (min-width: 900px) {
     display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
