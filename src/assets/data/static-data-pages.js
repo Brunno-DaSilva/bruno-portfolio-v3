@@ -20,7 +20,7 @@ export const STATIC_DATA_PAGES = [
     page_title: "Projects",
   },
   {
-    page: "Contact",
+    page_name: "Contact",
     page_ID: "2004",
     page_title: "Contact",
   },
