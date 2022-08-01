@@ -74,9 +74,9 @@ const Resume = ({ theme }) => {
         <Fragment className="resume">
           <div className="resume__title">
             <h1>Resume</h1>
-            {resumeLink.map(({ resumeLink }) => {
+            {resumeLink.map(({ resumeLink, _id }) => {
               return (
-                <>
+                <Fragment key={_id}>
                   <div className="download_resume_mb">
                     <a
                       className="glass"
@@ -114,7 +114,7 @@ const Resume = ({ theme }) => {
                       />
                     </a>
                   </div>
-                </>
+                </Fragment>
               );
             })}
           </div>
