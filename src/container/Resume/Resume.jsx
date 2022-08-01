@@ -23,12 +23,14 @@ const months = [
 
 const Resume = ({ theme }) => {
   const [workExperience, setWorkExperience] = useState([]);
+  const [resumeLink, setResumeLink] = useState([]);
   const [education, setEducation] = useState([]);
   let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const queryEd = '*[_type == "education"]';
     const queryWe = '*[_type == "workExperience"]';
+    const queryRl = '*[_type == "resume"]';
 
     client.fetch(queryEd).then((ed) => {
       setEducation(ed);
@@ -36,6 +38,9 @@ const Resume = ({ theme }) => {
 
     client.fetch(queryWe).then((we) => {
       setWorkExperience(we);
+    });
+    client.fetch(queryRl).then((rl) => {
+      setResumeLink(rl);
     });
   }, []);
 
@@ -69,43 +74,49 @@ const Resume = ({ theme }) => {
         <Fragment className="resume">
           <div className="resume__title">
             <h1>Resume</h1>
-            <div className="download_resume_mb">
-              <a
-                className="glass"
-                href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Download Full Resume"
-              >
-                <FiExternalLink
-                  color={theme ? "hsl(0, 0%, 95%)" : "hsl(181, 75%, 11%)"}
-                  size={30}
-                />
-              </a>
-            </div>
-            <div className="download_resume">
-              <a
-                className="glass"
-                href="https://drive.google.com/file/d/1LHCrhy9w3CxuCLcGCZJBYPvJRrAkAUHC/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Download Full Resume"
-              >
-                <span
-                  style={
-                    theme
-                      ? { color: "hsl(0, 0%, 95%)" }
-                      : { color: "hsl(181, 75%, 11%)" }
-                  }
-                >
-                  Download
-                </span>
-                <FiExternalLink
-                  color={theme ? "hsl(0, 0%, 95%)" : "hsl(181, 75%, 11%)"}
-                  size={30}
-                />
-              </a>
-            </div>
+            {resumeLink.map(({ resumeLink }) => {
+              return (
+                <>
+                  <div className="download_resume_mb">
+                    <a
+                      className="glass"
+                      href={resumeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Download Full Resume"
+                    >
+                      <FiExternalLink
+                        color={theme ? "hsl(0, 0%, 95%)" : "hsl(181, 75%, 11%)"}
+                        size={30}
+                      />
+                    </a>
+                  </div>
+                  <div className="download_resume">
+                    <a
+                      className="glass"
+                      href={resumeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Download Full Resume"
+                    >
+                      <span
+                        style={
+                          theme
+                            ? { color: "hsl(0, 0%, 95%)" }
+                            : { color: "hsl(181, 75%, 11%)" }
+                        }
+                      >
+                        Download
+                      </span>
+                      <FiExternalLink
+                        color={theme ? "hsl(0, 0%, 95%)" : "hsl(181, 75%, 11%)"}
+                        size={30}
+                      />
+                    </a>
+                  </div>
+                </>
+              );
+            })}
           </div>
 
           <div className="resume__container">
