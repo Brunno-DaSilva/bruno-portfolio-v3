@@ -27,6 +27,14 @@ Finally, I incorporated sanity.io in the backend. Sanity provides a super simple
 
 ---
 
+#### Default Theme
+
+<img src="./images/Home-Light-BG.PNG" alt="Home Page Background">
+
+#### Dark Theme
+
+<img src="./images/Home-DARK-BG.PNG" alt="Home Page Background">
+
 ### Get in touch:
 
 - [Bruno-DaSilva.com](http://www.bruno-dasilva.com/)
