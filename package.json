@@ -1,5 +1,6 @@
 {
   "name": "bruno-portfolio-v3",
+  "homepage": "https://bruno-dasilva.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
