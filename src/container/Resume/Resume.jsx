@@ -51,8 +51,7 @@ const Resume = ({ theme }) => {
   }, []);
 
   const formatMonth = (date) => {
-    const monthIndex =
-      date === undefined ? "0" : date.split("").splice(6, 1).join("");
+    const monthIndex = date === undefined ? 0 : Number(date.slice(5, 7));
     const MMM = months[monthIndex];
     return MMM;
   };

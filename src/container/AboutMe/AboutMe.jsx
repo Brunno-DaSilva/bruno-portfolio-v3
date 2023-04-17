@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-import { urlFor, client } from "../../client";
+import { client } from "../../client";
 import { PacmanLoader } from "react-spinners";
 
 import bgImageYellow from "../../assets/images/background_yellow.png";
@@ -41,7 +41,7 @@ const AboutMe = ({ theme, changeTheme }) => {
         />
       ) : (
         <Fragment>
-          {aboutData.map(({ title, subtitle, description, imgUrl }) => {
+          {aboutData.map(({ title, subtitle, description }) => {
             return (
               <Fragment key={title}>
                 <motion.div
@@ -62,7 +62,7 @@ const AboutMe = ({ theme, changeTheme }) => {
                     >
                       <img
                         className="Tilt-inner"
-                        src={urlFor(imgUrl)}
+                        src={require("../../assets/images/bruno4.png")}
                         alt="Bruno profile img"
                       />
                     </Tilt>
