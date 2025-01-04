@@ -1,6 +1,6 @@
 # Bruno Portfolio 2022
 
-##### [Bruno-DaSilva.com](http://www.bruno-dasilva.com/)
+##### [Bruno-DaSilva.com](https://bruno-dasilva-portfolio.netlify.app/)
 
 ---
 
